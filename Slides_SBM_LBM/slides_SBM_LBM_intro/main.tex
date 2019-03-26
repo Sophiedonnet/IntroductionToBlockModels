@@ -783,10 +783,10 @@ Y_{ij} \ | \ \{i\in\textcolor{yellow!40!orange}{\bullet},j\in\textcolor{blue!80!
               Let $n$ nodes divided into
               \begin{itemize}
               \item
-                $\mathcal{Q}=\{\textcolor{yellow!40!orange}{\bullet},\textcolor{blue!80!black}{\bullet},\textcolor{green!50!black}{\bullet}\}$,
-                $\text{card}(\mathcal{Q})$ known
-              \item  $\alpha_\bullet  =  ?$,
-              \item      $\pi_{\textcolor{yellow!40!orange}{\bullet}\textcolor{blue!80!black}{\bullet}}     =      ?$
+                $\mathcal{K}=\{\textcolor{yellow!40!orange}{\bullet},\textcolor{blue!80!black}{\bullet},\textcolor{green!50!black}{\bullet}\}$,
+                $\text{card}(\mathcal{K})$ known
+              \item  $\pi_\bullet  =  ?$,
+              \item      $\alpha_{\textcolor{yellow!40!orange}{\bullet}\textcolor{blue!80!black}{\bullet}}     =      ?$
               \end{itemize}
             \end{block}
           \end{small}
@@ -871,10 +871,10 @@ Let $Y_{ij}$ be a bi-partite network. Individuals in row and cols are not the sa
 \item Nodes $i= 1,\dots,n_1$   partitionned into $K_1$ clusters,  nodes $j= 1,\dots,n_2$  partitionned into $K_2$ clusters
 \item $$\begin{array}{cl}
 Z^1_i = k & \mbox{if node $i$ belongs to cluster (block) $k$}\\
-Z^2_k = k & \mbox{if node $j$ belongs to cluster (block) $\ell$}
+Z^2_j = \ell & \mbox{if node $j$ belongs to cluster (block) $\ell$}
 \end{array}$$
-\item $Z^2_i, Z^2_j$ independant variables
-$$ \mathbb{P}(Z^2_i = k) = \pi^1_k,\quad  \mathbb{P}(Z^2_j = k) = \pi^2_k$$
+\item $Z^1_i, Z^2_j$ independent variables
+$$ \mathbb{P}(Z^1_i = k) = \pi^1_k,\quad  \mathbb{P}(Z^2_j = \ell) = \pi^2_\ell$$
 \end{itemize}
 \end{block}
 
@@ -887,9 +887,9 @@ $$ \mathbb{P}(Z^2_i = k) = \pi^1_k,\quad  \mathbb{P}(Z^2_j = k) = \pi^2_k$$
 
 \begin{block}{Conditionally to $(Z^1_i)_{i=1,\dots,n_1},(Z^2_j)_{j=1,\dots,n_2}$... }
 
-$(Y_{ij})$ independant and 
+$(Y_{ij})$ independent and 
 \begin{eqnarray*}
- Y_{ij}  | Z^1_i, Z^2_j \sim  \mathcal{B}ern(\alpha_{Z^1_i,Z^2_j}) \quad \Leftrightarrow \quad  P(Y_{ij} = 1 | Z^1_i = k, Z^2_j = \ell)  =  \alpha_{k\ell}
+ Y_{ij}  | Z^1_i, Z^2_j \sim  \mathcal{B}ern(\alpha_{Z^1_i,Z^2_j}) \quad \Leftrightarrow \quad   \mathbb{P}(Y_{ij} = 1 | Z^1_i = k, Z^2_j = \ell)  =  \alpha_{k\ell}
 \end{eqnarray*}
 \end{block}
  
@@ -942,10 +942,10 @@ $(Y_{ij})$ independant and
 
 % Proposition Julien
 \begin{align*}
-Z_i = \mathbf{1}_{\{i \in \bullet\}}  \ & \sim^{\text{iid}} \mathcal{M}(1,\alpha), \quad \forall\bullet \in \mathcal{Q}_1, \\ 
-W_j=\mathbf{1}_{\{j \in \bullet\}}  \ & \sim^{\text{iid}} \mathcal{M}(1,\beta), \quad \forall\bullet \in \mathcal{Q}_2, \\
+Z^1_i = \mathbf{1}_{\{i \in \bullet\}}  \ & \sim^{\text{iid}} \mathcal{M}(1,\bpi^1), \quad \forall\bullet \in \mathcal{Q}_1, \\ 
+Z^2_j=\mathbf{1}_{\{j \in \bullet\}}  \ & \sim^{\text{iid}} \mathcal{M}(1,\bpi^2), \quad \forall\bullet \in \mathcal{Q}_2, \\
 Y_{ij} \ | \ \{i\in\textcolor{red}{\bullet},j\in\textcolor{yellow}{\bullet}\}
-& \sim^{\text{ind}} \mathcal{B}(\alpha_{\textcolor{red}{\bullet}\textcolor{yellow}{\bullet}})\\
+& \sim^{\text{ind}} \mathcal{B}ern(\alpha_{\textcolor{red}{\bullet}\textcolor{yellow}{\bullet}})\\
 \end{align*}
 
 
@@ -1007,8 +1007,8 @@ For instance :
 
 
 \begin{itemize}
-\item Love and frienship
-\item Working relations and frienship
+\item Love and friendship
+\item Working relations and friendship
 \item  In ecology : mutualistic and competition
 \end{itemize}
 
@@ -1019,7 +1019,7 @@ $Y_{ij} \in \{0,1\} ^ Q = (Y_{ij}^a, Y_{ij}^b)$, $\forall w \in \{0,1\}^2$
 
 
 
-$$\mathbb{P}(P(Y^a_{ij},Y^b_{ij} ) = w  | Z_i  = k, Z_j = \ell)  = \alpha^w _{k\ell}$$
+$$\mathbb{P}(Y^a_{ij},Y^b_{ij} = w  | Z_i  = k, Z_j = \ell)  = \alpha^w _{k\ell}$$
 
 \end{block}
 
@@ -1070,20 +1070,20 @@ In \textcolor{blue}{R package: blockmodels} when two relations are at stake.
 
 \begin{itemize}
 \item As before :  ($Y_{ij}$) be an adjacency matrix 
-\item  Let   $x^{ij} \in \mathbb{R}^p$  denotecovariates describing the pair $(i,j)$
+\item  Let   $x^{ij} \in \mathbb{R}^p$  denote covariates describing the pair $(i,j)$
 \end{itemize}
 
 \begin{block}{Latent variables : as before }
 \begin{itemize}
-\item The nodes $i= 1,\dots,n$ are partitionned into $K$ clusters
-\item $Z_i$ independant variables
+\item The nodes $i= 1,\dots,n$ are partitioned into $K$ clusters
+\item $Z_i$ independent variables
 $$ \mathbb{P}(Z_i = k) = \pi_k$$
 \end{itemize}
 \end{block}
  
 \begin{block}{Conditionally to $(Z_i)_{i=1,\dots,n}$... }
 
-$(Y_{ij})$ independant and 
+$(Y_{ij})$ independent and 
 \begin{eqnarray*}
  Y_{ij}  | Z_i, Z_j&\sim&   \mathcal{B}ern(\mbox{logit}(\alpha_{Z_i,Z_j} + \theta \cdot x_{ij}) ) \quad \mbox {if binary data} \\
  Y_{ij}  | Z_i, Z_j  &\sim&  \mathcal{P}(\exp(\alpha_{Z_i,Z_j} + \theta  \cdot x_{ij}) ) \quad \mbox {if counting data} 
@@ -1091,7 +1091,7 @@ $(Y_{ij})$ independant and
 \end{block}
 
 
-If $K = 1$ : all the connection heterogenity is explained by the covariates. 
+If $K = 1$ : all the connection heterogeneity is explained by the covariates. 
  \end{frame}
 
  
@@ -1112,10 +1112,11 @@ If $K = 1$ : all the connection heterogenity is explained by the covariates.
 
 %---------------------------------------------------------------------------------------------
 
+\subsection{Parameters estimation}
 
 \begin{frame} \frametitle{Likelihood for SBM}
 
- \begin{block}{Complète  likelihood $(\bY)$  et  $(\bZ)$}
+ \begin{block}{Complete  likelihood $(\bY)$  et  $(\bZ)$}
  \begin{eqnarray}\label{eq:lik}
 \ell_c(\bY,\bZ; \theta) &=& p(\bY | \bZ; \balpha) p(\bZ ; \bpi)\nonumber  \\
 &=& \prod_{i,j} f_{\alpha_{Z_i,Z_j}}(Y_{ij}) \times   \prod_{i} \pi_{Z_i} \nonumber  \\
@@ -1147,10 +1148,10 @@ If $K = 1$ : all the connection heterogenity is explained by the covariates.
 $$
  
   \begin{block}{Remark}
-$\boldsymbol{\mathcal{Z}} =  \mathop{\otimes}_{q=0\dots Q} \{1,\dots, K_q\}^{n_q}$ \color{dgreen} $\Rightarrow$ \color{black}  when  $K$ and $n$ increase, imposssible to copute. 
+$\boldsymbol{\mathcal{Z}} =  \mathop{\otimes}_{q=0\dots Q} \{1,\dots, K_q\}^{n_q}$ \color{dgreen} $\Rightarrow$ \color{black}  when  $K$ and $n$ increase, impossible to compute. 
  \end{block}
  
-\color{dgreen} \textbf{Standard tool to maximimse the likelihood when laent variable} \color{black} : EM  algorithm.  
+\color{dgreen} \textbf{Standard tool to maximize the likelihood when latent variables involved} \color{black} : EM  algorithm.  
  
  \end{frame}
  
@@ -1177,13 +1178,13 @@ At iteration $(t)$ :
 
 \begin{itemize}
 \item Step $E$ requires the computation of    $ \mathbb E_{\color{dgreen}\bZ | \bX, \theta^{(t-1)} } \left[\log \ell_c(\bX,\bZ; \theta)  \right] $
- \item However, once conditioned by par  $\bX$,  the  $\bZ$ are not independent anymore: complexe distribution if    $K$ and $n$ big. 
+ \item However, once conditioned by par  $\bX$,  the  $\bZ$ are not independent anymore: complex  distribution if    $K$ and $n$ big. 
   \end{itemize}
  \end{frame}
  
  %------------------------------------------------------------------------------------------------------
 
- \begin{frame}{Variationnel EM  : maximisation of a lower bound}
+ \begin{frame}{Variational EM  : maximization of a lower bound}
 
 
 \textcolor{dgreen}{\textbf{Idea}} : replace the complicated distribution $p(\cdot | \Xall; \theta) = [\bZ | \bX, \theta]$ by a simpler one. 
@@ -1240,7 +1241,7 @@ As a consequence:
 
 
   %------------------------------------------------------------------------------------------------------
- \begin{frame}{Variationnal EM }
+ \begin{frame}{Variational EM }
  
 
 \begin{itemize}
@@ -1303,7 +1304,7 @@ As a consequence:
 
 \end{frame}
  
- \section{Model selection}
+ \subsection{Model selection}
    %------------------------------------------------------------------------------------------------------
  \begin{frame}{ Penalized likelihood criterion}
 
@@ -1354,9 +1355,9 @@ $$
 %
 %
 \begin{itemize}
-\item  Imputation of the $\bZ$ par the MAP   \color{dgreen}  \cite{biernacki2000} \color{black}
+\item  Imputation of the $\bZ$ par the MAP   \color{blue}  \cite{biernacki2000} \color{black}
 $$\widehat{\bZ} = \arg \max_{\bZ}p(\bZ | \bX; \widehat{\theta}, \mathcal{M}) \approx   \arg \max_{\bZ}\mathcal{R}_{\hat \tau}(\bZ | \bX; \widehat{\theta}, \mathcal{M}) $$ 
-\item Integration of the $\bZ$ \color{dgreen}  \cite{Daudin2008, Barbillon2016d}  \color{black}
+\item Integration of the $\bZ$ \color{blue}  \cite{Daudin2008, Barbillon2016d}  \color{black}
 \begin{itemize}
 \item  $
  ICL(\mathcal{M}) =  E_{\bZ | \Xall; \widehat{\theta} \mathcal{M}} \left[\log  p_c(\Xall,\bZ; \widehat \theta,\mathcal{M})\right]+  pen_{\mathcal{M}}  
@@ -1450,13 +1451,21 @@ Starting from  $K$
 \end{block}
  \end{frame}
 
+
+\begin{frame}\frametitle{Theoretical properties for SBM}
+\begin{itemize}
+\item Identifiability and a first consistency result by \color{blue} \cite{celisse:daudin:laurent:2012} \color{black}
+\item Consistency of the posterior distribution of the latent variables \color{blue} \cite{mariadassou2015} \color{black}
+\item Consistency and properties of the variational estimators \color{blue} \cite{bickel2013} \color{black}
+\end{itemize}
+\end{frame}
 %--------------------------------------------------- 
 \begin{frame}{Other extensions}
 
 \begin{itemize}
 \item  Time evolving networks \textcolor{blue}{Matias} 
 \item  Multipartite networks (\textcolor{blue}{R-package GREMLIN, Bar-Hen, Barbillon, Donnet}) 
-\item Multilevel networks (individuals and organisations)  (\textcolor{blue}{Chabbert-Liddell})
+\item Multilevel networks (individuals and organizations)  (\textcolor{blue}{Chabbert-Liddell})
  \item Missing data in the network,
 \end{itemize}
 \end{frame}
@@ -1475,6 +1484,13 @@ Starting from  $K$
 \end{frame}
 
 
+\begin{frame}[allowframebreaks]{References}
+\bibliographystyle{apalike}
+ \small{\bibliography{biblio}}
+  \end{frame}
+  
+  
+  
 
 
 

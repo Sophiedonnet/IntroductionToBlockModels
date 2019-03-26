@@ -144,14 +144,14 @@ extractParamBM <- function(BMobject,Q){
     res$Q <- c(length(res$piRow ),length(res$piCol))
     names(res$Q) <- c('QRow','QCol')
     
-    if (model == "poisson") {
-      oCol <- order(res$lambda %*% matrix(res$piCol,ncol = 1),decreasing = TRUE)
-      oRow <- order(matrix(res$pirow,nrow = 1) %*%  res$lambda  ,decreasing = TRUE)
-    }
-    if ((model == "bernoulli") | (model == 'gaussian')){
-      o <- order(res$alpha %*% matrix(res$pi,ncol = 1),decreasing = TRUE)
-    }
-    
+    # if (model == "poisson") {
+    #   oCol <- order(res$lambda %*% matrix(res$piCol,ncol = 1),decreasing = TRUE)
+    #   oRow <- order(matrix(res$pirow,nrow = 1) %*%  res$lambda  ,decreasing = TRUE)
+    # }
+    # if ((model == "bernoulli") | (model == 'gaussian')){
+    #   o <- order(res$alpha %*% matrix(res$pi,ncol = 1),decreasing = TRUE)
+    # }
+    # 
     
     # oRow <- order(res$alpha %*% matrix(res$piCol,ncol = 1),decreasing = TRUE)
     # resOrd <- res; 

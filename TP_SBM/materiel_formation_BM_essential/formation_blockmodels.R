@@ -25,10 +25,10 @@ plotMatrix(Mat = tree_bin,rowFG = 'tree', colFG  = 'tree')
 
 # SBM for bernoulli 
 if (!exists("sbm.tree_bin")) {
-  sbm.tree_bin <- BM_bernoulli("SBM_sym",tree_bin)
+  sbm.tree_bin <- BM_bernoulli("SBM_sym",tree_bin )
   sbm.tree_bin$estimate()
 }
-
+sbm.tree_bin
 
 #save(sbm.tree_bin,file='res_sbm_tree_bin.Rdata')
 #load(file='res_sbm_tree_bin.Rdata')
@@ -58,6 +58,7 @@ lapply(1:Q,function(q){tree_list[paramEstimSBM$Z == q]})
 #-------------------------------------------
 
 # data
+
 plotMatrix(Mat = tree,rowFG = 'tree', colFG  = 'tree')
 
 
@@ -103,6 +104,7 @@ alluvial(A[,c(1,2)],freq = A$Freq)
 
 
 # SBM for Poisson
+ListVar  = lapply(1:3, function(q){0.5*(ListVar[[q]] + t(ListVar[[q]]))})
 if (!exists("sbm.cov")) {
   sbm.cov <- BM_poisson_covariates("SBM",tree, ListVar)
   sbm.cov$estimate()

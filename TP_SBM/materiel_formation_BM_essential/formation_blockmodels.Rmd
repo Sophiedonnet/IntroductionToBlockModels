@@ -1,7 +1,7 @@
 ---
 title: "Introduction to SBM and LBM. Practice"
-author: "Sophie Donnet & Sarah Ouadah"
-date: "18 janvier 2019"
+author: "Sophie Donnet"
+date: "Mars 2019"
 output: html_document
 editor_options: 
   chunk_output_type: console
@@ -156,6 +156,7 @@ sbm.tree <- BM_poisson("SBM_sym",tree)
  
 ```{r estimate SBM poisson, echo=TRUE, eval = FALSE}
 sbm.tree$estimate()
+save(sbm.tree, file = '../results/res_sbm_tree.Rdata')
 ```
 ![](../Plot/ICL_tree_poisson.png)
 
@@ -189,7 +190,7 @@ plotMatrix(tree,'tree','tree', fileNameSave = NULL, clustering = list(row=paramE
 
 ```{r plot BM network tree poisson, echo=TRUE, eval = FALSE}
 G <- graph_from_adjacency_matrix(paramEstimSBMPoisson$lambda, mode = c("undirected"), weighted = TRUE, diag = TRUE)
-plot.igraph(G,vertex.size=paramEstimSBMPoisson$pi*100,edge.width=abs(E(G)$weight)*3,vertex.color=1:Q, layout=layout_nicely)
+plot.igraph(G,vertex.size=paramEstimSBMPoisson$pi*100,edge.width=abs(E(G)$weight)*1,vertex.color=1:Q, layout=layout_nicely)
 ``` 
 ![](../Plot/BMnet_tree.png)
 
