@@ -108,57 +108,55 @@ extractParamBM <- function(BMobject,Q){
   
   
   if ((membership_name == 'SBM') | (membership_name == 'SBM_sym')) {
+    res$Q <- Q 
     res$tau <-  BMobject$memberships[[Q]]$Z
+    
+    
+    
+    #reordering
+    o <- 1:res$Q
+    if (model %in% c("poisson", "bernoulli", 'gaussian')) {
+      o <- order(diag(res$alpha),decreasing = TRUE)
+    }
+    res$alpha <- res$alpha[o,o];
+    if (model == 'poisson') {res$lambda <- res$lambda[o,o]}
+    res$tau <- res$tau[,o]
+    res$pi <-  colMeans(res$tau)
     res$Z <- apply(res$tau, 1, which.max)
-    n <- nrow(BMobject$memberships[[Q]]$Z)
-    res$pi <-  colSums(BMobject$memberships[[Q]]$Z)/n
-    
-    o <- 1:length(res$pi)
-    if (model == "poisson") {
-      o <- order(res$lambda %*% matrix(res$pi,ncol = 1),decreasing = TRUE)
-      }
-    if ((model == "bernoulli") | (model == 'gaussian')){
-      o <- order(res$alpha %*% matrix(res$pi,ncol = 1),decreasing = TRUE)
-      }
-    #reordering clusters 
-    
-    resOrd <- res; 
-    resOrd$pi <- res$pi[o];
-    resOrd$alpha <- res$alpha[o,o];
-    if (model == 'poisson'){resOrd$lambda <- res$lambda[o,o]}
-    resOrd$Z <- o[res$Z]
-    resOrd$tau <- res$tau[,o]
-    res <- resOrd
   }
   
-  if (membership_name == 'LBM'){
+  if (membership_name == 'LBM') {
     res$tauRow <-  BMobject$memberships[[Q]]$Z1
     res$tauCol <-  BMobject$memberships[[Q]]$Z2
     
-    res$ZRow <- apply(res$tauRow, 1, which.max)
-    res$ZCol <- apply(res$tauCol, 1, which.max)
-    nRow <- nrow(BMobject$memberships[[Q]]$Z1)
-    nCol <- nrow(BMobject$memberships[[Q]]$Z2)
-    res$piRow <-  colSums(BMobject$memberships[[Q]]$Z1)/nRow
-    res$piCol <-  colSums(BMobject$memberships[[Q]]$Z2)/nCol
-    res$Q <- c(length(res$piRow ),length(res$piCol))
+    res$Q <- c(ncol(res$tauRow),ncol(res$tauCol))
     names(res$Q) <- c('QRow','QCol')
     
-    # if (model == "poisson") {
-    #   oCol <- order(res$lambda %*% matrix(res$piCol,ncol = 1),decreasing = TRUE)
-    #   oRow <- order(matrix(res$pirow,nrow = 1) %*%  res$lambda  ,decreasing = TRUE)
-    # }
-    # if ((model == "bernoulli") | (model == 'gaussian')){
-    #   o <- order(res$alpha %*% matrix(res$pi,ncol = 1),decreasing = TRUE)
-    # }
-    # 
+    oCol <- 1:res$Q[2]
+    if (model %in% c("poisson", "bernoulli", 'gaussian')) {
+      oCol <- order(colSums(res$alpha),decreasing = TRUE)
+    }
     
-    # oRow <- order(res$alpha %*% matrix(res$piCol,ncol = 1),decreasing = TRUE)
-    # resOrd <- res; 
-    # resOrd$pi <- res$pi[o];
-    # resOrd$alpha <- res$alpha[o,o];
-    # resOrd$Z <- o[res$Z]
-    # resOrd$tau <- res$tau[,o]
+    oRow <- 1:res$Q[1]
+    if (model %in% c("poisson", "bernoulli", 'gaussian')) {
+      oRow <- order(rowSums(res$alpha),decreasing = TRUE)
+    }
+    res$alpha <- res$alpha[oRow,oCol];
+    if (model == 'poisson') {res$lambda <- res$lambda[oRow,oCol]}
+    
+    
+    res$tauRow <- res$tauRow[,oRow]
+    res$tauCol <- res$tauCol[,oCol]
+    res$ZRow <- apply(res$tauRow, 1, which.max)
+    res$ZCol <- apply(res$tauCol, 1, which.max)
+    res$ZRow <- apply(res$tauRow, 1, which.max)
+    res$ZCol <- apply(res$tauCol, 1, which.max)
+    res$piRow <-  colMeans(res$tauRow)
+    res$piCol <-  colMeans(res$tauCol)
+    
+    
+    
+    
     
     
   }
@@ -198,4 +196,25 @@ plotNetBM = function(BMobject,Q){
 }
 
 #vertex.size=c*100, vertex.size2=d*100,
+#---------------------- ALLUVIAL PLOT
+
+data_frame_clusterings =cbind(paramEstimSBM$Z,paramEstimSBMPoisson$Z,paramEstimSBMPoissonCov$Z)
+data_frame_clusterings <- as.data.frame(data_frame_clusterings)
+colnames(data_frame_clusterings) <- c('SBM Bern',"SBM Poisson","SBM Cov")
+
+alluvial_plot = function(data_frame_clusterings){
+  B <- table(data_frame_clusterings)
+  B <- as.data.frame(B)
+  w   <- which(B$Freq != 0)
+  B <- B[w,]
+  
+  
+  alluvial(B[,1:ncol(data_frame_clusterings)],freq = B$Freq)
+  
+  
+}
+colnames(B) = 
+w   <- which(B$Freq != 0)
+
+
 

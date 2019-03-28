@@ -48,7 +48,7 @@ plotMatrix(tree_bin,'tree','tree', fileNameSave = NULL, clustering = list(row = 
 
 #- macropscopic view of the network
 G <- graph_from_adjacency_matrix(paramEstimSBM$alpha, mode = c("undirected"), weighted = TRUE, diag = TRUE)
-plot.igraph(G,vertex.size = paramEstimSBM$pi*100,edge.width= abs(E(G)$weight)*3,vertex.color = 1:Q, layout = layout_nicely)
+plot.igraph(G,vertex.size = paramEstimSBM$pi*100,edge.width= abs(E(G)$weight)*4,vertex.color = 1:Q, layout = layout_nicely)
 
 #-  composition of the clusters
 lapply(1:Q,function(q){tree_list[paramEstimSBM$Z == q]})
@@ -168,6 +168,6 @@ plotMatrix(fungi_tree,'fungi','tree', fileNameSave = NULL, clustering = list(row
 
 # macropscopic view
 G <- graph_from_incidence_matrix(paramEstimLBM$alpha, weighted = TRUE)
-plot(G,vertex.size = c(paramEstimLBM$piRow * 100, paramEstimLBM$piCol * 100), vertex.shape = c("circle", "square")[V(G)$type + 1],        edge.width=abs(E(G)$weight*2),vertex.color=1:Q, layout=layout.bipartite)
+plot(G,vertex.size = c(paramEstimLBM$piRow * 100, paramEstimLBM$piCol * 100), vertex.shape = c("circle", "square")[V(G)$type + 1],        edge.width=abs(E(G)$weight*10),vertex.color=1:Q, layout=layout.bipartite)
 
 
