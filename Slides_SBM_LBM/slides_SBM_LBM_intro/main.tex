@@ -1248,7 +1248,7 @@ As a consequence:
 \item Maximization of  $\log \ell(\Xall ; \theta)$  w.r.t.  $\theta$ replaced by maximization of the lower bound $\mathcal{I}_{\theta}(\mathcal{R}_{\Xall,\btau}) $  w.r.t.  $\tau$ and $\theta$. 
 \item \textbf{Benefit} : we choose   $\mathcal{R}_{\Xall,\btau}$  such that the maximization calculus can be done explicitly
  \begin{itemize}
- \item In our case: mean filed approximation : neglect dependencies between the  $(Z_i)$ 
+ \item In our case: mean field approximation : neglect dependencies between the  $(Z_i)$ 
  $$P_{\mathcal{R}_{\Xall,\btau}}(Z^q_i=k) = \tau_{ik}^q$$
   \end{itemize}
 
@@ -1287,8 +1287,8 @@ As a consequence:
  \item[$\bullet$]\textbf{Step 2} Maximization  w.r.t.  $\theta$
  \begin{eqnarray*}
  \theta^{(t)} &=& \arg \max_{\theta}   \mathcal{I}_{\theta}(\mathcal{R}_{\Xall,\btau^{(t)}}) \\
- &=&   \arg \max_{\theta} \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau^{(t)}}} \left[\ell_c(\bX,\bZ;  \theta)   \right]  +   \mathcal{H}\left(\mathcal{R}_{\Xall,\btau^{(t)}}(\bZ)\right)\\
-&=&  \arg \max_{\theta} \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau^{(t)}}} \left[\ell_c(\bX,\bZ;  \theta)   \right]  
+ &=&   \arg \max_{\theta} \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau^{(t)}}} \left[\log \ell_c(\bX,\bZ;  \theta)   \right]  +   \mathcal{H}\left(\mathcal{R}_{\Xall,\btau^{(t)}}(\bZ)\right)\\
+&=&  \arg \max_{\theta} \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau^{(t)}}} \left[\log \ell_c(\bX,\bZ;  \theta)   \right]  
  \end{eqnarray*}
  
 \end{enumerate}
@@ -1360,12 +1360,12 @@ $$\widehat{\bZ} = \arg \max_{\bZ}p(\bZ | \bX; \widehat{\theta}, \mathcal{M}) \ap
 \item Integration of the $\bZ$ \color{blue}  \cite{Daudin2008, Barbillon2016d}  \color{black}
 \begin{itemize}
 \item  $
- ICL(\mathcal{M}) =  E_{\bZ | \Xall; \widehat{\theta} \mathcal{M}} \left[\log  p_c(\Xall,\bZ; \widehat \theta,\mathcal{M})\right]+  pen_{\mathcal{M}}  
+ ICL(\mathcal{M}) =  \mathbb{E}_{\bZ | \Xall; \widehat{\theta} \mathcal{M}} \left[\log  p_c(\Xall,\bZ; \widehat \theta,\mathcal{M})\right]+  pen_{\mathcal{M}}  
 $
  \item 
   $p(\bZ | \Xall; \widehat{\theta}, \mathcal{M})$ $\Rightarrow$   $\mathcal{R}_{\Xall,\widehat{\btau}}$   
  \item $
-  \widehat{ICL}(\M)=  E_{\mathcal{R}_{\Xall,\widehat{\btau}}} \left[\log  p_c(\Xall,\bZ; \theta, \mathcal{M})\right]+ pen_{\mathcal{M}}    
+  \widehat{ICL}(\M)=  \mathbb{E}_{\mathcal{R}_{\Xall,\widehat{\btau}}} \left[\log  p_c(\Xall,\bZ; \theta, \mathcal{M})\right]+ pen_{\mathcal{M}}    
  $
 \end{itemize}
 \end{itemize}

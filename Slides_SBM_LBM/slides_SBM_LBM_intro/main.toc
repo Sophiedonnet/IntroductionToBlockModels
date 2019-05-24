@@ -6,4 +6,5 @@
 \beamer@subsectionintoc {3}{2}{LBM}{29}{0}{3}
 \beamer@subsectionintoc {3}{3}{Some possible extensions}{32}{0}{3}
 \beamer@sectionintoc {4}{Inference}{36}{0}{4}
-\beamer@sectionintoc {5}{Model selection}{48}{0}{5}
+\beamer@subsectionintoc {4}{1}{Parameters estimation}{38}{0}{4}
+\beamer@subsectionintoc {4}{2}{Model selection}{48}{0}{4}
