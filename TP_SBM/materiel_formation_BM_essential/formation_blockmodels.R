@@ -7,7 +7,7 @@ load('fungi_tree_data.Rdata')
 ls()
 
 #---------------------------------------------
-#### useful packages 
+#### useful packages
 #---------------------------------------------
 # install.packages("blockmodels")
 library(blockmodels)
@@ -23,7 +23,7 @@ source('function_for_blockmodels.R')
 # data
 plotMatrix(Mat = tree_bin,rowFG = 'tree', colFG  = 'tree')
 
-# SBM for bernoulli 
+# SBM for bernoulli
 if (!exists("sbm.tree_bin")) {
   sbm.tree_bin <- BM_bernoulli("SBM_sym",tree_bin )
   sbm.tree_bin$estimate()
@@ -34,7 +34,7 @@ sbm.tree_bin
 #load(file='res_sbm_tree_bin.Rdata')
 
 # optimal number of blocks / cluster
-Q = which.max(sbm.tree_bin$ICL) 
+Q = which.max(sbm.tree_bin$ICL)
 Q
 
 #- extract the estimated parameters
@@ -75,7 +75,7 @@ if (!exists("sbm.tree")) {
 Q = which.max(sbm.tree$ICL)
 Q
 
-# Extract parameters 
+# Extract parameters
 paramEstimSBMPoisson <- extractParamBM(sbm.tree,Q)
 paramEstimSBMPoisson$pi
 paramEstimSBMPoisson$lambda
@@ -132,14 +132,14 @@ w   <- which(B$Freq != 0)
 B <- B[w,]
 alluvial(B[,c(1,2,3)],freq = B$Freq)
 
-# Macroscopic view 
+# Macroscopic view
 G <- graph_from_adjacency_matrix(paramEstimSBMPoissonCov$lambda, mode = c("undirected"), weighted = TRUE, diag = TRUE)
 plot.igraph(G,vertex.size=paramEstimSBMPoissonCov$pi*100,edge.width=sqrt(abs(E(G)$weight)),vertex.color = 1:Q, layout = layout_nicely)
 
 
 
 #---------------------------------------------
-####  Latent block model 
+####  Latent block model
 #---------------------------------------------
 
 if (!exists("lbm")) {
