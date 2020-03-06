@@ -91,7 +91,7 @@ extractParamBM <- function(BMobject,Q){
     res$theta <-  BMobject$model_parameters[Q][[1]]$beta
   }
 
-  if (model == 'bernoulli_covariates') { ### a vérifier???
+  if (model == 'bernoulli_covariates') { ### a v??rifier???
     res$alpha <- BMobject$model_parameters[Q][[1]]$pi
     res$theta <-  BMobject$model_parameters[Q][[1]]$beta
   }
@@ -143,8 +143,8 @@ extractParamBM <- function(BMobject,Q){
       1:res$Q[1]
     )
     oCol <- switch(model,
-      poisson = order(matrix(res$piRow,nrow = 1) %*% res$lambda,decreasing = TRUE),
-      bernoulli  =  order(matrix(res$piRow,nrow = 1) %*% res$alpha,decreasing = TRUE),
+      poisson = order(c(matrix(res$piRow,nrow = 1) %*% res$lambda),decreasing = TRUE),
+      bernoulli  =  order(c(matrix(res$piRow,nrow = 1) %*% res$alpha),decreasing = TRUE),
       1:res$Q[2]
     )
 
@@ -152,7 +152,11 @@ extractParamBM <- function(BMobject,Q){
     res$piCol <- res$piCol[oCol]
     res$alpha <- res$alpha[oRow,oCol]
     res$tauRow <- res$tauRow[,oRow]
-    res$tauCpl <- res$tauRow[,oCol]
+    res$tauCol <- res$tauCol[,oCol]
+    
+    if(is.vector(res$tauCol)){res$tauCol = matrix(res$tauCol,ncol=1)}
+    if(is.vector(res$tauRow)){res$tauRow = matrix(res$tauRow,ncol=1)}
+    
     res$ZRow <- apply(res$tauRow, 1, which.max)
     res$ZCol <- apply(res$tauCol, 1, which.max)
 

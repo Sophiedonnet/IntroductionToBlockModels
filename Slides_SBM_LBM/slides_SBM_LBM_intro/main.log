@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.21)  24 MAY 2019 10:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.21)  21 FEB 2020 15:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1595,21 +1595,21 @@ Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 136.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 143.
 
 
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
@@ -1681,7 +1681,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box103
-Package hyperref Info: Link coloring OFF on input line 136.
+Package hyperref Info: Link coloring OFF on input line 143.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1691,60 +1691,60 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count350
 )
-LaTeX Info: Redefining \ref on input line 136.
-LaTeX Info: Redefining \pageref on input line 136.
-LaTeX Info: Redefining \nameref on input line 136.
+LaTeX Info: Redefining \ref on input line 143.
+LaTeX Info: Redefining \pageref on input line 143.
+LaTeX Info: Redefining \nameref on input line 143.
 
 (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 136.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 143.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/bx/n on input line 136.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/bx/n on input line 143.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 136.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 143.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 136.
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 143.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 136.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 136.
+(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 143.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/bx/n on input line 136.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/bx/n on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/bx/n on input line 136.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 136.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/bx/n on input line 143.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 136.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 136.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 136.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 143.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 136.
+(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 136.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 136.
+(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 143.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 136.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 136.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 143.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 136.
+(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 143.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 136.
+(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmr/bx/n on input line 136.
+(Font)                  OT1/lmss/bx/n --> T1/lmr/bx/n on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/lmss/bx/n --> T1/lmss/bx/n on input line 136.
+(Font)                  T1/lmss/bx/n --> T1/lmss/bx/n on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 136.
+(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 136.
+(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 143.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/m/n --> T1/lmtt/bx/n on input line 136.
+(Font)                  T1/lmtt/m/n --> T1/lmtt/bx/n on input line 143.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
 -English.dict
@@ -1770,9 +1770,9 @@ Dictionary: translator-numbers-dictionary, Language: English
 ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \degres on input line 136.
-LaTeX Info: Redefining \dots on input line 136.
-LaTeX Info: Redefining \up on input line 136.
+LaTeX Info: Redefining \degres on input line 143.
+LaTeX Info: Redefining \dots on input line 143.
+LaTeX Info: Redefining \up on input line 143.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1780,70 +1780,70 @@ Package caption Info: End \AtBeginDocument code.
 <plots/AgroParisTech_-_logo.PNG, id=78, 992.95969pt x 366.61969pt>
 File: plots/AgroParisTech_-_logo.PNG Graphic file (type png)
 <use plots/AgroParisTech_-_logo.PNG>
-Package pdftex.def Info: plots/AgroParisTech_-_logo.PNG  used on input line 149
+Package pdftex.def Info: plots/AgroParisTech_-_logo.PNG  used on input line 156
 .
 (pdftex.def)             Requested size: 99.30177pt x 36.66411pt.
-<plots/INRA_logo.jpg, id=80, 845.0772pt x 346.4142pt>
-File: plots/INRA_logo.jpg Graphic file (type jpg)
-<use plots/INRA_logo.jpg>
-Package pdftex.def Info: plots/INRA_logo.jpg  used on input line 149.
-(pdftex.def)             Requested size: 84.51266pt x 34.64345pt.
+<plots/Logo-INRAE.jpg, id=80, 301.125pt x 79.29625pt>
+File: plots/Logo-INRAE.jpg Graphic file (type jpg)
+<use plots/Logo-INRAE.jpg>
+Package pdftex.def Info: plots/Logo-INRAE.jpg  used on input line 156.
+(pdftex.def)             Requested size: 90.33818pt x 23.78905pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
- <./plots/AgroParisTech_-_logo.PNG> <./plots/INRA_logo.jpg>] (./main.toc)
+ <./plots/AgroParisTech_-_logo.PNG> <./plots/Logo-INRAE.jpg>] (./main.toc)
 [2
 
 ]
 <plots/image_SBM.png, id=156, 115.27065pt x 87.4467pt>
 File: plots/image_SBM.png Graphic file (type png)
 <use plots/image_SBM.png>
-Package pdftex.def Info: plots/image_SBM.png  used on input line 182.
+Package pdftex.def Info: plots/image_SBM.png  used on input line 189.
 (pdftex.def)             Requested size: 46.10744pt x 34.97804pt.
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 182
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 189
 .
  (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 182.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 189.
 
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 182
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 189
 .
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 182
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 189
 .
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 182.
+(Font)              <10> on input line 189.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 182.
+(Font)              <7> on input line 189.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 182.
-LaTeX Font Info:    Try loading font information for U+msa on input line 182.
+(Font)              <5> on input line 189.
+LaTeX Font Info:    Try loading font information for U+msa on input line 189.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 182.
+LaTeX Font Info:    Try loading font information for U+msb on input line 189.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 182.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 189.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 182.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 189.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 182.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 189.
  [3
 
  <./plots/image_SBM.png>] [4
@@ -1851,22 +1851,22 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
 ]
 File: plots/image_SBM.png Graphic file (type png)
 <use plots/image_SBM.png>
-Package pdftex.def Info: plots/image_SBM.png  used on input line 235.
+Package pdftex.def Info: plots/image_SBM.png  used on input line 242.
 (pdftex.def)             Requested size: 69.1629pt x 52.46841pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 235.
+(Font)              <9> on input line 242.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 235.
+(Font)              <6> on input line 242.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <9> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 235.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 242.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 235.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 242.
  [5
 
 ]
 File: plots/image_SBM.png Graphic file (type png)
 <use plots/image_SBM.png>
-Package pdftex.def Info: plots/image_SBM.png  used on input line 259.
+Package pdftex.def Info: plots/image_SBM.png  used on input line 266.
 (pdftex.def)             Requested size: 69.1629pt x 52.46841pt.
  [6
 
@@ -1874,7 +1874,7 @@ Package pdftex.def Info: plots/image_SBM.png  used on input line 259.
 <plots/graphe_adj.pdf, id=282, 505.89pt x 505.89pt>
 File: plots/graphe_adj.pdf Graphic file (type pdf)
 <use plots/graphe_adj.pdf>
-Package pdftex.def Info: plots/graphe_adj.pdf  used on input line 293.
+Package pdftex.def Info: plots/graphe_adj.pdf  used on input line 300.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
  [7
 
@@ -1882,7 +1882,7 @@ Package pdftex.def Info: plots/graphe_adj.pdf  used on input line 293.
 <plots/graphe_bipartite.pdf, id=321, 505.89pt x 505.89pt>
 File: plots/graphe_bipartite.pdf Graphic file (type pdf)
 <use plots/graphe_bipartite.pdf>
-Package pdftex.def Info: plots/graphe_bipartite.pdf  used on input line 339.
+Package pdftex.def Info: plots/graphe_bipartite.pdf  used on input line 346.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
  [8
 
@@ -1893,31 +1893,31 @@ Package pdftex.def Info: plots/graphe_bipartite.pdf  used on input line 339.
 ] [11
 
 ]
-<plots/chilean_food_web.pdf, id=454, 505.89pt x 505.89pt>
+<plots/chilean_food_web.pdf, id=460, 505.89pt x 505.89pt>
 File: plots/chilean_food_web.pdf Graphic file (type pdf)
 <use plots/chilean_food_web.pdf>
-Package pdftex.def Info: plots/chilean_food_web.pdf  used on input line 407.
+Package pdftex.def Info: plots/chilean_food_web.pdf  used on input line 414.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
  [12
 
  <./plots/chilean_food_web.pdf>]
-<plots/chilean_outdeg.pdf, id=490, 505.89pt x 505.89pt>
+<plots/chilean_outdeg.pdf, id=499, 505.89pt x 505.89pt>
 File: plots/chilean_outdeg.pdf Graphic file (type pdf)
 <use plots/chilean_outdeg.pdf>
-Package pdftex.def Info: plots/chilean_outdeg.pdf  used on input line 418.
+Package pdftex.def Info: plots/chilean_outdeg.pdf  used on input line 425.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
-<plots/chilean_intdeg.pdf, id=491, 505.89pt x 505.89pt>
+<plots/chilean_intdeg.pdf, id=500, 505.89pt x 505.89pt>
 File: plots/chilean_intdeg.pdf Graphic file (type pdf)
 <use plots/chilean_intdeg.pdf>
-Package pdftex.def Info: plots/chilean_intdeg.pdf  used on input line 418.
+Package pdftex.def Info: plots/chilean_intdeg.pdf  used on input line 425.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
  [13
 
  <./plots/chilean_outdeg.pdf> <./plots/chilean_intdeg.pdf>]
-<plots/chilean_nested.pdf, id=536, 505.89pt x 505.89pt>
+<plots/chilean_nested.pdf, id=544, 505.89pt x 505.89pt>
 File: plots/chilean_nested.pdf Graphic file (type pdf)
 <use plots/chilean_nested.pdf>
-Package pdftex.def Info: plots/chilean_nested.pdf  used on input line 436.
+Package pdftex.def Info: plots/chilean_nested.pdf  used on input line 443.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
  [14
 
@@ -1925,7 +1925,7 @@ Package pdftex.def Info: plots/chilean_nested.pdf  used on input line 436.
 \openout4 = `main.vrb'.
 
  (./main.vrb
-<plots/chilean_between.pdf, id=570, 505.89pt x 505.89pt>
+<plots/chilean_between.pdf, id=578, 505.89pt x 505.89pt>
 File: plots/chilean_between.pdf Graphic file (type pdf)
 <use plots/chilean_between.pdf>
 Package pdftex.def Info: plots/chilean_between.pdf  used on input line 4.
@@ -1936,25 +1936,25 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )) [15
 
  <./plots/chilean_between.pdf>]
-<plots/chilean_modularity.pdf, id=608, 505.89pt x 505.89pt>
+<plots/chilean_modularity.pdf, id=616, 505.89pt x 505.89pt>
 File: plots/chilean_modularity.pdf Graphic file (type pdf)
 <use plots/chilean_modularity.pdf>
-Package pdftex.def Info: plots/chilean_modularity.pdf  used on input line 476.
+Package pdftex.def Info: plots/chilean_modularity.pdf  used on input line 483.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
  [16
 
  <./plots/chilean_modularity.pdf>] (./main.toc) [17
 
 ]
-<plots/ER.pdf, id=687, 505.89pt x 505.89pt>
+<plots/ER.pdf, id=695, 505.89pt x 505.89pt>
 File: plots/ER.pdf Graphic file (type pdf)
 <use plots/ER.pdf>
-Package pdftex.def Info: plots/ER.pdf  used on input line 500.
+Package pdftex.def Info: plots/ER.pdf  used on input line 507.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
-<plots/degER.pdf, id=688, 505.89pt x 505.89pt>
+<plots/degER.pdf, id=696, 505.89pt x 505.89pt>
 File: plots/degER.pdf Graphic file (type pdf)
 <use plots/degER.pdf>
-Package pdftex.def Info: plots/degER.pdf  used on input line 500.
+Package pdftex.def Info: plots/degER.pdf  used on input line 507.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
 
 [18
@@ -1963,17 +1963,17 @@ Package pdftex.def Info: plots/degER.pdf  used on input line 500.
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 547.
+(Font)              <12> on input line 553.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 547.
+(Font)              <8> on input line 553.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 547.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 553.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 547.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 553.
  [20
 
 ]
-Overfull \vbox (16.41074pt too high) detected at line 646
+Overfull \vbox (16.41074pt too high) detected at line 652
  []
 
 [21
@@ -1981,41 +1981,41 @@ Overfull \vbox (16.41074pt too high) detected at line 646
 ] [22
 
 ]
-<plots/sbm/Etoile_reordered_adja_with_groups.png, id=887, 569.0058pt x 569.0058
+<plots/sbm/Etoile_reordered_adja_with_groups.png, id=897, 569.0058pt x 569.0058
 pt>
 File: plots/sbm/Etoile_reordered_adja_with_groups.png Graphic file (type png)
 <use plots/sbm/Etoile_reordered_adja_with_groups.png>
 Package pdftex.def Info: plots/sbm/Etoile_reordered_adja_with_groups.png  used 
-on input line 679.
+on input line 685.
 (pdftex.def)             Requested size: 113.79913pt x 113.79913pt.
-<plots/sbm/Etoile_graphe_with_colors.png, id=888, 481.8pt x 481.8pt>
+<plots/sbm/Etoile_graphe_with_colors.png, id=898, 481.8pt x 481.8pt>
 File: plots/sbm/Etoile_graphe_with_colors.png Graphic file (type png)
 <use plots/sbm/Etoile_graphe_with_colors.png>
 Package pdftex.def Info: plots/sbm/Etoile_graphe_with_colors.png  used on input
- line 679.
+ line 685.
 (pdftex.def)             Requested size: 96.35829pt x 96.35829pt.
-<plots/sbm/Etoile_graphe_resume.png, id=889, 481.8pt x 481.8pt>
+<plots/sbm/Etoile_graphe_resume.png, id=899, 481.8pt x 481.8pt>
 File: plots/sbm/Etoile_graphe_resume.png Graphic file (type png)
 <use plots/sbm/Etoile_graphe_resume.png>
 Package pdftex.def Info: plots/sbm/Etoile_graphe_resume.png  used on input line
- 679.
+ 685.
 (pdftex.def)             Requested size: 96.35829pt x 96.35829pt.
 
-Overfull \hbox (35.22585pt too wide) in paragraph at lines 679--679
+Overfull \hbox (35.22585pt too wide) in paragraph at lines 685--685
  [][] 
  []
 
-<plots/sbm/Etoile_histogram_degree.png, id=890, 481.8pt x 481.8pt>
+<plots/sbm/Etoile_histogram_degree.png, id=900, 481.8pt x 481.8pt>
 File: plots/sbm/Etoile_histogram_degree.png Graphic file (type png)
 <use plots/sbm/Etoile_histogram_degree.png>
 Package pdftex.def Info: plots/sbm/Etoile_histogram_degree.png  used on input l
-ine 679.
+ine 685.
 (pdftex.def)             Requested size: 96.35829pt x 96.35829pt.
-<plots/sbm/Etoile_betweeness.png, id=891, 481.8pt x 481.8pt>
+<plots/sbm/Etoile_betweeness.png, id=901, 481.8pt x 481.8pt>
 File: plots/sbm/Etoile_betweeness.png Graphic file (type png)
 <use plots/sbm/Etoile_betweeness.png>
-Package pdftex.def Info: plots/sbm/Etoile_betweeness.png  used on input line 67
-9.
+Package pdftex.def Info: plots/sbm/Etoile_betweeness.png  used on input line 68
+5.
 (pdftex.def)             Requested size: 96.35829pt x 96.35829pt.
 [23
 
@@ -2023,83 +2023,83 @@ Package pdftex.def Info: plots/sbm/Etoile_betweeness.png  used on input line 67
 oile_graphe_with_colors.png (PNG copy)> <./plots/sbm/Etoile_graphe_resume.png (
 PNG copy)> <./plots/sbm/Etoile_histogram_degree.png> <./plots/sbm/Etoile_betwee
 ness.png>]
-<plots/sbm/Affiliation_reordered_adja_with_groups.png, id=927, 569.0058pt x 569
+<plots/sbm/Affiliation_reordered_adja_with_groups.png, id=937, 569.0058pt x 569
 .0058pt>
 File: plots/sbm/Affiliation_reordered_adja_with_groups.png Graphic file (type p
 ng)
 <use plots/sbm/Affiliation_reordered_adja_with_groups.png>
 Package pdftex.def Info: plots/sbm/Affiliation_reordered_adja_with_groups.png  
-used on input line 698.
+used on input line 704.
 (pdftex.def)             Requested size: 113.79913pt x 113.79913pt.
-<plots/sbm/Affiliation_graphe_with_colors.png, id=928, 481.8pt x 481.8pt>
+<plots/sbm/Affiliation_graphe_with_colors.png, id=938, 481.8pt x 481.8pt>
 File: plots/sbm/Affiliation_graphe_with_colors.png Graphic file (type png)
 <use plots/sbm/Affiliation_graphe_with_colors.png>
 Package pdftex.def Info: plots/sbm/Affiliation_graphe_with_colors.png  used on 
-input line 698.
+input line 704.
 (pdftex.def)             Requested size: 96.35829pt x 96.35829pt.
-<plots/sbm/Affiliation_graphe_resume.png, id=929, 481.8pt x 481.8pt>
+<plots/sbm/Affiliation_graphe_resume.png, id=939, 481.8pt x 481.8pt>
 File: plots/sbm/Affiliation_graphe_resume.png Graphic file (type png)
 <use plots/sbm/Affiliation_graphe_resume.png>
 Package pdftex.def Info: plots/sbm/Affiliation_graphe_resume.png  used on input
- line 698.
+ line 704.
 (pdftex.def)             Requested size: 96.35829pt x 96.35829pt.
-<plots/sbm/Affiliation_histogram_degree.png, id=930, 481.8pt x 481.8pt>
+<plots/sbm/Affiliation_histogram_degree.png, id=940, 481.8pt x 481.8pt>
 File: plots/sbm/Affiliation_histogram_degree.png Graphic file (type png)
 <use plots/sbm/Affiliation_histogram_degree.png>
 Package pdftex.def Info: plots/sbm/Affiliation_histogram_degree.png  used on in
-put line 698.
+put line 704.
 (pdftex.def)             Requested size: 96.35829pt x 96.35829pt.
  [24
 
  <./plots/sbm/Affiliation_reordered_adja_with_groups.png (PNG copy)> <./plots/s
 bm/Affiliation_graphe_with_colors.png (PNG copy)> <./plots/sbm/Affiliation_grap
 he_resume.png (PNG copy)> <./plots/sbm/Affiliation_histogram_degree.png>]
-<plots/sbm/Nested_reordered_adja_with_groups.png, id=966, 569.0058pt x 569.0058
+<plots/sbm/Nested_reordered_adja_with_groups.png, id=976, 569.0058pt x 569.0058
 pt>
 File: plots/sbm/Nested_reordered_adja_with_groups.png Graphic file (type png)
 <use plots/sbm/Nested_reordered_adja_with_groups.png>
 Package pdftex.def Info: plots/sbm/Nested_reordered_adja_with_groups.png  used 
-on input line 716.
+on input line 722.
 (pdftex.def)             Requested size: 113.79913pt x 113.79913pt.
-<plots/sbm/Nested_graphe_with_colors.png, id=967, 481.8pt x 481.8pt>
+<plots/sbm/Nested_graphe_with_colors.png, id=977, 481.8pt x 481.8pt>
 File: plots/sbm/Nested_graphe_with_colors.png Graphic file (type png)
 <use plots/sbm/Nested_graphe_with_colors.png>
 Package pdftex.def Info: plots/sbm/Nested_graphe_with_colors.png  used on input
- line 716.
+ line 722.
 (pdftex.def)             Requested size: 96.35829pt x 96.35829pt.
-<plots/sbm/Nested_graphe_resume.png, id=968, 481.8pt x 481.8pt>
+<plots/sbm/Nested_graphe_resume.png, id=978, 481.8pt x 481.8pt>
 File: plots/sbm/Nested_graphe_resume.png Graphic file (type png)
 <use plots/sbm/Nested_graphe_resume.png>
 Package pdftex.def Info: plots/sbm/Nested_graphe_resume.png  used on input line
- 716.
+ 722.
 (pdftex.def)             Requested size: 96.35829pt x 96.35829pt.
-<plots/sbm/Nested_histogram_degree.png, id=969, 481.8pt x 481.8pt>
+<plots/sbm/Nested_histogram_degree.png, id=979, 481.8pt x 481.8pt>
 File: plots/sbm/Nested_histogram_degree.png Graphic file (type png)
 <use plots/sbm/Nested_histogram_degree.png>
 Package pdftex.def Info: plots/sbm/Nested_histogram_degree.png  used on input l
-ine 716.
+ine 722.
 (pdftex.def)             Requested size: 96.35829pt x 96.35829pt.
  [25
 
  <./plots/sbm/Nested_reordered_adja_with_groups.png (PNG copy)> <./plots/sbm/Ne
 sted_graphe_with_colors.png (PNG copy)> <./plots/sbm/Nested_graphe_resume.png (
 PNG copy)> <./plots/sbm/Nested_histogram_degree.png>]
-Overfull \vbox (5.54042pt too high) detected at line 816
+Overfull \vbox (5.54042pt too high) detected at line 822
  []
 
 [26
 
 ]
-<plots/sbm/Nested_adja.png, id=1038, 569.0058pt x 569.0058pt>
+<plots/sbm/Nested_adja.png, id=1051, 569.0058pt x 569.0058pt>
 File: plots/sbm/Nested_adja.png Graphic file (type png)
 <use plots/sbm/Nested_adja.png>
-Package pdftex.def Info: plots/sbm/Nested_adja.png  used on input line 829.
+Package pdftex.def Info: plots/sbm/Nested_adja.png  used on input line 835.
 (pdftex.def)             Requested size: 113.79913pt x 113.79913pt.
-<plots/sbm/Nested_graphe_without_colors.png, id=1039, 481.8pt x 481.8pt>
+<plots/sbm/Nested_graphe_without_colors.png, id=1052, 481.8pt x 481.8pt>
 File: plots/sbm/Nested_graphe_without_colors.png Graphic file (type png)
 <use plots/sbm/Nested_graphe_without_colors.png>
 Package pdftex.def Info: plots/sbm/Nested_graphe_without_colors.png  used on in
-put line 829.
+put line 835.
 (pdftex.def)             Requested size: 96.35829pt x 96.35829pt.
  [27
 
@@ -2108,12 +2108,12 @@ lors.png (PNG copy)>]
 File: plots/sbm/Nested_reordered_adja_with_groups.png Graphic file (type png)
 <use plots/sbm/Nested_reordered_adja_with_groups.png>
 Package pdftex.def Info: plots/sbm/Nested_reordered_adja_with_groups.png  used 
-on input line 855.
+on input line 861.
 (pdftex.def)             Requested size: 113.79913pt x 113.79913pt.
 File: plots/sbm/Nested_graphe_with_colors.png Graphic file (type png)
 <use plots/sbm/Nested_graphe_with_colors.png>
 Package pdftex.def Info: plots/sbm/Nested_graphe_with_colors.png  used on input
- line 855.
+ line 861.
 (pdftex.def)             Requested size: 96.35829pt x 96.35829pt.
  [28
 
@@ -2122,22 +2122,27 @@ Package pdftex.def Info: plots/sbm/Nested_graphe_with_colors.png  used on input
 ] [30
 
 ]
-<plots/LBM_exemple.pdf, id=1173, 505.89pt x 505.89pt>
+<plots/LBM_exemple.pdf, id=1188, 505.89pt x 505.89pt>
 File: plots/LBM_exemple.pdf Graphic file (type pdf)
 <use plots/LBM_exemple.pdf>
-Package pdftex.def Info: plots/LBM_exemple.pdf  used on input line 955.
+Package pdftex.def Info: plots/LBM_exemple.pdf  used on input line 960.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
 
-Overfull \vbox (33.65022pt too high) detected at line 955
+Overfull \vbox (33.65022pt too high) detected at line 960
  []
 
 
-Overfull \vbox (4.03134pt too high) detected at line 955
+Overfull \vbox (4.03134pt too high) detected at line 960
  []
 
 [31
 
- <./plots/LBM_exemple.pdf>] [32
+ <./plots/LBM_exemple.pdf>]
+
+LaTeX Warning: Citation `mariadassou2010uncovering' on page 32 undefined on inp
+ut line 1004.
+
+[32
 
 ] [33
 
@@ -2149,18 +2154,17 @@ Overfull \vbox (4.03134pt too high) detected at line 955
 
 ]
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 1110
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 1115
 .
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <7> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 1110
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 1115
 .
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <5> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 1110
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 1115
 .
  [37
 
-]
-[38
+] [38
 
 ] [39
 
@@ -2172,7 +2176,8 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <5> not available
 
 ] [43
 
-] [44
+]
+[44
 
 ] [45
 
@@ -2180,36 +2185,24 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <5> not available
 
 ] [47
 
-] [48
+]
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 1329.
+
+ (/usr/share/texmf/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [48
 
 ]
-Overfull \hbox (35.1879pt too wide) detected at line 1348
+Overfull \hbox (35.1879pt too wide) detected at line 1353
 \T1/lmss/m/sl/10 pen[] \OT1/lmss/m/n/10 = []
  []
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 1348.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 1348.
-
 [49
 
-]
-
-LaTeX Warning: Citation `biernacki2000' on page 50 undefined on input line 1373
-.
-
-
-LaTeX Warning: Citation `Daudin2008' on page 50 undefined on input line 1373.
-
-
-LaTeX Warning: Citation `Barbillon2016d' on page 50 undefined on input line 137
-3.
-
-[50
+] [50
 
 ]
-Overfull \hbox (3.57959pt too wide) detected at line 1420
+Overfull \hbox (3.57959pt too wide) detected at line 1399
 []\OT1/lmss/m/n/10 (\OMS/lmsy/m/n/10 M\OT1/lmss/m/n/10 ) = \T1/lmss/m/sl/10 BIC
 \OT1/lmss/m/n/10 (\OMS/lmsy/m/n/10 M\OT1/lmss/m/n/10 ) + [] \OMS/lmsy/m/n/10 R[
 ]\OT1/lmss/m/n/10 (\T1/lmss/bx/n/10 Z\OML/lmm/m/it/10 ; []\OT1/lmss/m/n/10 ) []
@@ -2223,27 +2216,22 @@ mss/m/n/10 ; [])] \OML/lmm/m/it/10 :
 
 ] [52
 
-]
-
-LaTeX Warning: Citation `celisse:daudin:laurent:2012' on page 53 undefined on i
-nput line 1461.
-
-
-LaTeX Warning: Citation `mariadassou2015' on page 53 undefined on input line 14
-61.
-
-
-LaTeX Warning: Citation `bickel2013' on page 53 undefined on input line 1461.
-
-[53
+] [53
 
 ] [54
 
 ] [55
 
-]
-No file main.bbl.
-[56
+] (./main.bbl) [56
+
+ </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>] [57
+
+
+] [58
+
+
+] [59
+
 
 ]
 \tf@nav=\write6
@@ -2255,11 +2243,11 @@ No file main.bbl.
 \tf@snm=\write8
 \openout8 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1498.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1498.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1476.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1476.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1498.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1498.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1476.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1476.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 47A93F34B86DA288B6D8EA44E61A3D2F;518.
@@ -2269,24 +2257,24 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 35566 strings out of 492982
- 720188 string characters out of 6134895
- 817489 words of memory out of 5000000
- 38302 multiletter control sequences out of 15000+600000
- 650334 words of font info for 103 fonts, out of 8000000 for 9000
+ 35695 strings out of 492982
+ 723495 string characters out of 6134895
+ 818622 words of memory out of 5000000
+ 38400 multiletter control sequences out of 15000+600000
+ 655899 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,17n,82p,10393b,1305s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
 -mathex.enc}</usr/share/texmf/fonts/type1/public/lm/lmbsy10.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmbsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lme
 x10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi5.pf
-b></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/typ
-e1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/publi
-c/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share
+b></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/pub
+lic/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss9.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss
@@ -2298,10 +2286,10 @@ sr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (56 pages, 3032356 bytes).
+Output written on main.pdf (59 pages, 2350970 bytes).
 PDF statistics:
- 2163 PDF objects out of 2487 (max. 8388607)
- 1980 compressed objects within 20 object streams
- 124 named destinations out of 1000 (max. 500000)
+ 2304 PDF objects out of 2487 (max. 8388607)
+ 2113 compressed objects within 22 object streams
+ 145 named destinations out of 1000 (max. 500000)
  380 words of extra memory for PDF output out of 10000 (max. 10000000)
 

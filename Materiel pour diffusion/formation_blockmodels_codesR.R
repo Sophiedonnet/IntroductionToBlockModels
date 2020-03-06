@@ -111,7 +111,7 @@ alluvial(A[,c(1,2)],freq=A$Freq)
 ## ----covar SBM,echo=TRUE,eval=FALSE------------------------------------------------------------------------------------------------------------
 
 
-sbm.cov <- BM_poisson_covariates("SBM",adj = tree, covariates = ListVar)
+sbm.cov <- BM_poisson_covariates("SBM_sym",adj = tree, covariates = ListVar)
 sbm.cov$estimate()
 
 

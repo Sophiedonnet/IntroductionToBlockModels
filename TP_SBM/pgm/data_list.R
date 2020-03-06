@@ -1,3 +1,5 @@
+where_data <- "/home/donnet/WORK_ALL/RECHERCHE/FORMATION_RECHERCHE/FORMATION_RESEAUX/2020_03_Ecostat/IntroductionToBlockModels_Ecostat/TP_SBM/data"
+setwd(where_data)
 fungi_tree = read.table("FungiTree/fungi_tree_interactions.txt")
 fungi_tree = fungi_tree[-dim(fungi_tree)[1],
                         -dim(fungi_tree)[2]]
@@ -18,14 +20,23 @@ ListVar = list(tree_genet,tree_taxo,tree_geo)
 ListVarscale <- ListVar
 ListVarscale[[1]] <- ListVar[[1]]/max(c(ListVar[[1]]))
 ListVarscale[[2]] <- ListVar[[2]]/max(c(ListVar[[2]]))
+
+library(Matrix)
+ListVarscale[[1]] <- as.matrix(forceSymmetric(ListVarscale[[1]],uplo = "U"))
+ListVarscale[[2]] <- as.matrix(forceSymmetric(ListVarscale[[2]],uplo = "U"))
+ListVarscale[[3]] <- as.matrix(forceSymmetric(ListVarscale[[3]],uplo = "U"))
+isSymmetric(ListVarscale[[2]])
+isSymmetric(ListVarscale[[1]])
+isSymmetric(ListVarscale[[3]])
+
 ListVar <- ListVarscale
 
+tree_list = read.table("nouvelles_data/Tree_species_list.csv", sep = ";")
 
-tree_list= read.table("nouvelles_data/Tree_species_list.csv", sep=";")
-tree_list=tree_list[,2]
+tree_list = tree_list[,2]
 
-fungi_list= read.table("nouvelles_data/Fungal_species_list.csv", sep=";")
-fungi_list=fungi_list[,2]
+fungi_list = read.table("nouvelles_data/Fungal_species_list.csv", sep = ";")
+fungi_list = fungi_list[,2]
 
 fungi_tree_data= list(Name='data_list', fungi_tree=fungi_tree, tree=tree, tree_bin=tree_bin, ListVar=ListVar, tree_list=tree_list, fungi_list=fungi_list)
 # liste avec fungi_tree, tree, tree_bin, ListVar, tree_list, fungi_list
