@@ -17,8 +17,8 @@
 \usetikzlibrary{positioning,shapes,arrows}
 
 
-\definecolor{lgreen}{RGB}{188,214,49}
-\definecolor{dgreen}{RGB}{139,172,33}
+\definecolor{dgreen}{RGB}{102,193,191}
+\definecolor{lgreen}{RGB}{0,140,142}
 %\setbeamercolor{structure}{fg=INRA@dinst}
 
 \setbeamertemplate{blocks}[rounded][shadow=true]
@@ -88,6 +88,13 @@ pdfproducer = {INRA}%
 \newcommand{\E}{\mathbb{E}}
 \renewcommand{\P}{\mathbb{P}}
 
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newcommand{\KL}{\mathrm{KL}}
+\newcommand{\ICL}{\mathrm{ICL}}
+\newcommand{\pen}{\mathrm{pen}}
+
+
 \newcommand{\diag}{\mathop{\mathrm{diag}}}
 \newcommand{\bbeta}{\boldsymbol{\beta}}
 \newcommand{\balpha}{\boldsymbol{\alpha}}
@@ -123,11 +130,11 @@ pdfproducer = {INRA}%
 
 %\subtitle{Presentation Soustitre}sp
 
-\author{Sophie Donnet}
+\author{UMR Mia Paris (S. Donnet, S. Robin, S. Ouadah...) }
 
 
 
-\date{26-27 mars 2019, Nantes}
+\date{Mars 2020, Rennes}
 
  
 
@@ -143,7 +150,7 @@ pdfproducer = {INRA}%
 \includegraphics[scale=.1]{plots/AgroParisTech_-_logo.PNG}
 \vspace{-1.2cm}
 \begin{flushright}
- \includegraphics[scale=.1]{plots/INRA_logo.jpg}
+ \includegraphics[scale=.3]{plots/Logo-INRAE.jpg}
  \end{flushright}
 
 \end{frame}
@@ -187,8 +194,8 @@ Networks may be or not bipartite: Interactions between nodes belonging to the sa
  
  A network consists in:
  \begin{itemize}
-  \item nodes/vertices which reprensent individuals / species /ships which may interact or not,
-  \item links/edges/connections which stand for an interaction between a pair of nodes / dyad.
+  \item nodes/vertices which represent individuals / species /ships which may interact or not,
+  \item links/edges/connections which stand for an interaction between a pair of nodes / dyads.
   
  \end{itemize}
 
@@ -356,14 +363,14 @@ $$
 
 \item Degree distribution, can be viewed as a measure of heterogeneity,
 \item Nestedness: a network is said to be nested when its nodes that have the smallest degree, are connected to nodes with the highest degree,
-\textcolor{blue}{Rodríguez-Gironés \& Santamaria (2006)}
+\textcolor{blue}{\cite{Rodriguez2006}}
 
 \item Betweenness centrality: for a node, numbers of shortest paths between any pair of nodes passing through this node.
-\textcolor{blue}{Freeman (1979)}
+\textcolor{blue}{\cite{FREEMAN1978215}}
 
 \item Modularity: is a measure for a given partition of its tendency of favoring intra-connection over inter-connection.  
 $\Rightarrow$ Finding the best partition with respect to modularity criterion. 
-\textcolor{blue}{Clauset, Newman \& Moore (2004)}
+\textcolor{blue}{\cite{clauset2008hierarchical}}
 \end{itemize}
 \end{frame}
 
@@ -402,7 +409,7 @@ All this criterion shall be adapted to:
 \end{itemize}
 
 
-\textcolor{blue}{Kéfi, Miele, Wieters, Navarrete \& Berlow (2016)}
+\textcolor{blue}{\cite{kefi}}
 
 \end{frame}
 
@@ -521,8 +528,7 @@ where $b$ is the Bernoulli distribution and $p\in[0,1]$ a probability for a link
 
 \begin{frame}  \frametitle{Stochastic Block Model}
 
-\textcolor{blue}{Nowicki, \& Snijders (2001)}
-
+\textcolor{blue}{\cite{nowickiSnijders2001}}
 Let ($Y_{ij}$) be an adjacency matrix 
 
 \begin{block}{Latent variables}
@@ -797,7 +803,7 @@ Y_{ij} \ | \ \{i\in\textcolor{yellow!40!orange}{\bullet},j\in\textcolor{blue!80!
     \medskip
 
     
-    \textcolor{blue}{Nowicki, \& Snijders (2001), Daudin et al. (2008)}
+    \textcolor{blue}{\cite{nowickiSnijders2001}, \cite{daudin2008mixture}}
     
     \bigskip
     
@@ -894,8 +900,7 @@ $(Y_{ij})$ independent and
 \end{block}
  
 
-\textcolor{blue}{Govaert \& Nadif (2008)}  
-
+\textcolor{blue}{\cite{Govaert2008}}
 
 \end{frame}
 
@@ -949,7 +954,7 @@ Y_{ij} \ | \ \{i\in\textcolor{red}{\bullet},j\in\textcolor{yellow}{\bullet}\}
 \end{align*}
 
 
-\textcolor{blue}{Govaert \& Nadif (2008)} and 
+\textcolor{blue}{\cite{Govaert2008}} and 
 \textcolor{blue}{R package: blockmodels} as well.
 
 \end{frame}
@@ -988,7 +993,7 @@ Y_{ij} \ | \ \{i\in\textcolor{red}{\bullet},j\in\textcolor{yellow}{\bullet}\}
 \sim^{\text{ind}} \mathcal{P}(\lambda_{\textcolor{yellow!40!orange}{\bullet}\textcolor{blue!80!black}{\bullet}})$,
  \item Gaussian distribution: $Y_{ij} \ | \ \{i\in\textcolor{yellow!40!orange}{\bullet},j\in\textcolor{blue!80!black}{\bullet}\}
 \sim^{\text{ind}} \mathcal{N}(\mu_{\textcolor{yellow!40!orange}{\bullet}\textcolor{blue!80!black}{\bullet}},\sigma^2)$,
-\textcolor{blue}{Mariadassou et al. (2010)}
+\textcolor{blue}{\cite{mariadassou2010uncovering}}
 \item More generally, 
   $$Y_{ij} \ | \ \{i\in\textcolor{yellow!40!orange}{\bullet},j\in\textcolor{blue!80!black}{\bullet}\}
 \sim^{\text{ind}} \mathcal{F}(\theta_{\textcolor{yellow!40!orange}{\bullet}\textcolor{blue!80!black}{\bullet}})$$
@@ -1024,12 +1029,12 @@ $$\mathbb{P}(Y^a_{ij},Y^b_{ij} = w  | Z_i  = k, Z_j = \ell)  = \alpha^w _{k\ell}
 \end{block}
 
 \textcolor{blue}{
-Kefi et al. (2016), Barbillon et al. (2016)} 
+\cite{kefi}, \cite{barbillon2017stochastic}}
 
 In \textcolor{blue}{R package: blockmodels} when two relations are at stake.
  
 
- \textbf{Remark:} a particular case of multiplex network is dynamic network, \textcolor{blue}{Matias \& Miele (2015)}.
+ \textbf{Remark:} a particular case of multiplex network is dynamic network, \textcolor{blue}{\cite{matias2017statistical}}.
  
 
  \end{frame}
@@ -1058,7 +1063,7 @@ In \textcolor{blue}{R package: blockmodels} when two relations are at stake.
  \end{enumerate}
 
 
- If covariates are sampling conditions, case 2 may more interesting.
+ If covariates are sampling conditions, case 2  be  may more interesting.
  
 \end{frame}
 
@@ -1102,7 +1107,7 @@ If $K = 1$ : all the connection heterogeneity is explained by the covariates.
 \begin{frame}\frametitle{Statistical Inference}
 
 \begin{itemize}
-\item Selection of the number of clusters $K$for SBM  or $K_1,K_2$ for LBM
+\item Selection of the number of clusters $K$ for SBM  or $K_1,K_2$ for LBM
 \item Estimation of the parameters $\mathbf{\pi}, \btheta$ for a given number of clusters
 \item Clustering $\hat \bZ$
 \end{itemize}
@@ -1248,7 +1253,7 @@ As a consequence:
 \item Maximization of  $\log \ell(\Xall ; \theta)$  w.r.t.  $\theta$ replaced by maximization of the lower bound $\mathcal{I}_{\theta}(\mathcal{R}_{\Xall,\btau}) $  w.r.t.  $\tau$ and $\theta$. 
 \item \textbf{Benefit} : we choose   $\mathcal{R}_{\Xall,\btau}$  such that the maximization calculus can be done explicitly
  \begin{itemize}
- \item In our case: mean filed approximation : neglect dependencies between the  $(Z_i)$ 
+ \item In our case: mean field approximation : neglect dependencies between the  $(Z_i)$ 
  $$P_{\mathcal{R}_{\Xall,\btau}}(Z^q_i=k) = \tau_{ik}^q$$
   \end{itemize}
 
@@ -1269,7 +1274,7 @@ As a consequence:
 \begin{eqnarray*}
 \btau^{(t)}  &=&  \arg \max_{\btau  \in \mathcal{T}}  \mathcal{I}_{\theta^{(t-1)}}(\mathcal{R}_{\Xall,\btau})\\
  &=&  \arg \max_{\btau  \in \mathcal{T}}   \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau}} \left[\log \ell_c(\bX,\bZ;  \theta^{(t-1)})   \right] +  \mathcal{H}\left(\mathcal{R}_{\Xall,\btau}(\bZ)\right) \\
-&=&  \arg \max_{\btau  \in \mathcal{T}}  \log \ell(\Xall ; \theta^{(t-1)})  -  \mathbf{KL}[\mathcal{R}_{\Xall, \btau}, p(\cdot | \Xall; \theta^{(t-1)})]\\
+&=&  \arg \max_{\btau  \in \mathcal{T}}  \log \ell(\Xall ; \theta^{(t-1)})  -  \mathbf{KL}[\mathcal{R}_{\Xall, \btau}, p(\cdot | \Xall; \theta^{(t-1)})]\\ 
 &=& \arg \min_{\btau  \in \mathcal{T}}\mathbf{KL}[\mathcal{R}_{\Xall, \btau}, p(\cdot | \Xall; \theta^{(t-1)})]\\ 
  \end{eqnarray*}
  \end{enumerate}
@@ -1287,8 +1292,8 @@ As a consequence:
  \item[$\bullet$]\textbf{Step 2} Maximization  w.r.t.  $\theta$
  \begin{eqnarray*}
  \theta^{(t)} &=& \arg \max_{\theta}   \mathcal{I}_{\theta}(\mathcal{R}_{\Xall,\btau^{(t)}}) \\
- &=&   \arg \max_{\theta} \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau^{(t)}}} \left[\ell_c(\bX,\bZ;  \theta)   \right]  +   \mathcal{H}\left(\mathcal{R}_{\Xall,\btau^{(t)}}(\bZ)\right)\\
-&=&  \arg \max_{\theta} \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau^{(t)}}} \left[\ell_c(\bX,\bZ;  \theta)   \right]  
+ &=&   \arg \max_{\theta} \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau^{(t)}}} \left[\log \ell_c(\bX,\bZ;  \theta)   \right]  +   \mathcal{H}\left(\mathcal{R}_{\Xall,\btau^{(t)}}(\bZ)\right)\\
+&=&  \arg \max_{\theta} \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau^{(t)}}} \left[\log \ell_c(\bX,\bZ;  \theta)   \right]  
  \end{eqnarray*}
  
 \end{enumerate}
@@ -1310,22 +1315,22 @@ As a consequence:
 
  \begin{itemize}
  \item  Selection of the number of clusters  $K$ (or $K_1$, $K_2$ in the LBM)
-\item  Bayesian information criterion (BIC) :  approximation of the marginal likelihood  $m_c(\Xall,\bZ ;  \mathcal{M})$ where the parameters  $\theta$ have been integrated out with a "well chosen" prior distribution 
+\item   Integrated Classification Likelihood (ICL)   \textcolor{blue}{\cite{biernacki2000assessing}}
  \end{itemize}
  
 
- 
- \begin{block}{BIC if  $\bZ$ are observed}
-Let $\mathcal{M} = \M$ 
-\begin{eqnarray*}
-&& \log m_c(\Xall,\bZ ;  \mathcal{M}) \approx_{n \rightarrow \infty} \max_{\theta} \log \ell_c(\Xall,\bZ; \theta, \mathcal{M}) + pen_{\mathcal{M}}\\
-\end{eqnarray*}
-\end{block}
+\begin{equation}\label{eq:ICL}
+ICL(\M) =\log  \ell_c(\Xall,\hat{\bZ}; \hat \theta_{\bK})-  \pen(\M)
+\end{equation}
+ where  \begin{equation}\label{eq:Zhat}
+\hat{Z}_i ^q = \argmax_{k \in \{1, \dots, K_q\}}  \hat{\tau}_{ik}^q. 
+\end{equation} 
 
 \end{frame}
 
+
    %------------------------------------------------------------------------------------------------------
- \begin{frame}{Expression of the penalization if  $\bZ$ are observed}
+ \begin{frame}{Expression of the penalization}
  
 \textcolor{dgreen}{ \textbf{For SBM } }
 
@@ -1350,54 +1355,28 @@ $$
 
    %------------------------------------------------------------------------------------------------------
 
-\begin{frame}{Penalized criterion when $\bZ$ non-observed  :  ICL}
+\begin{frame}{Advantages of ICL}
 
-%
-%
+ 
 \begin{itemize}
-\item  Imputation of the $\bZ$ par the MAP   \color{blue}  \cite{biernacki2000} \color{black}
-$$\widehat{\bZ} = \arg \max_{\bZ}p(\bZ | \bX; \widehat{\theta}, \mathcal{M}) \approx   \arg \max_{\bZ}\mathcal{R}_{\hat \tau}(\bZ | \bX; \widehat{\theta}, \mathcal{M}) $$ 
-\item Integration of the $\bZ$ \color{blue}  \cite{Daudin2008, Barbillon2016d}  \color{black}
-\begin{itemize}
-\item  $
- ICL(\mathcal{M}) =  E_{\bZ | \Xall; \widehat{\theta} \mathcal{M}} \left[\log  p_c(\Xall,\bZ; \widehat \theta,\mathcal{M})\right]+  pen_{\mathcal{M}}  
-$
- \item 
-  $p(\bZ | \Xall; \widehat{\theta}, \mathcal{M})$ $\Rightarrow$   $\mathcal{R}_{\Xall,\widehat{\btau}}$   
- \item $
-  \widehat{ICL}(\M)=  E_{\mathcal{R}_{\Xall,\widehat{\btau}}} \left[\log  p_c(\Xall,\bZ; \theta, \mathcal{M})\right]+ pen_{\mathcal{M}}    
- $
-\end{itemize}
+\item its capacity to outline the clustering structure in networks% in \cite{Daudinetal2008} (for simple networks),  \cite{keribin2015} (for bipartite networks)  or \cite{mariadassou2010} for valued networks.  
+\item Involves a trade-off between goodness of fit and model complexity
+\item ICL values :   goodness of fit  AND clustering  sharpness.
+ 
 \end{itemize}
 
 \end{frame}
+
  
 
-   %------------------------------------------------------------------------------------------------------
-%
-%\begin{frame}{Commentaires sur  ICL versus BIC}
-%
-%$$ 
-% \widehat{ICL}(\mathcal{M})  =BIC(\mathcal{M})  +   \sum_{\Zall} \mathcal{R}_{\Xall}(\bZ,\widehat{\btau})  \log \mathcal{R}_{\Xall,\widehat{\btau}}({\bZ}) -  \mathbf{KL}[\mathcal{R}_{\Xall,\widehat{\btau}}, p(\cdot | \Xall;\widehat{\theta})]\,. 
-%$$
-%
-%\begin{itemize}
-%\item $\widehat{\btau}$   tel que  $ \mathbf{KL}[\mathcal{R}_{\Xall,\widehat{\btau}}, p(\cdot | \Xall;\widehat{\theta})] \approx 0$
-%
-%\item $  \widehat{ICL}(\mathcal M)  \approx BIC(\mathcal M)  - \mathcal{H}(\mathcal{R}_{\Xall}(\cdot,\widehat{\btau}))
-% $ où $\mathcal{H}$ est l'entropie.
-% \item  Par conséquent, à cause de ce terme d'entropie, ICL va encourager des configurations de classification avec des groupes bien séparés. 
-%%Its capacity to outline the clustering structure in the data has been tested in the literature, either in mixture models \citep{baudry2009}, latent bock models \citep{keribin2015}  or stochastic block models \citep{mariadassou2010}.
-%\end{itemize}
-%
-% 
-% \end{frame}
-% 
+
+  %------------------------------------------------------------------------------------------------------
+
  \begin{frame}{Comments on the   ICL versus BIC}
 
 \begin{block}{Conjecture}
 \begin{eqnarray*}
- BIC(\Mcal)  &=&   \left[\log \ell(\Xall; \theta, \Mcal)\right] - \mbox{pen}(\Mcal)
+ BIC(\Mcal)  &=&   \left[\log \ell(\Xall; \hat{\theta}, \Mcal)\right] - \mbox{pen}(\Mcal)
 \end{eqnarray*}
 with the same penalty
  \end{block}
@@ -1425,8 +1404,7 @@ $$
 
 
 
-\begin{frame}{Algorithm in practice} 
-
+\begin{frame}{Algorithm in practice}  
 \begin{itemize}
 \item Going trough the models and initiate VEM at the same time
 \item Bounds on $K$ :  $\{K_{ \min},\dots, K_{\max}\}$
@@ -1454,9 +1432,9 @@ Starting from  $K$
 
 \begin{frame}\frametitle{Theoretical properties for SBM}
 \begin{itemize}
-\item Identifiability and a first consistency result by \color{blue} \cite{celisse:daudin:laurent:2012} \color{black}
-\item Consistency of the posterior distribution of the latent variables \color{blue} \cite{mariadassou2015} \color{black}
-\item Consistency and properties of the variational estimators \color{blue} \cite{bickel2013} \color{black}
+\item Identifiability and a first consistency result by \color{blue} \cite{celisse2012consistency} \color{black}
+\item Consistency of the posterior distribution of the latent variables \color{blue} \cite{mariadassou2015convergence} \color{black}
+\item Consistency and properties of the variational estimators \color{blue} \cite{bickel2013asymptotic} \color{black}
 \end{itemize}
 \end{frame}
 %--------------------------------------------------- 
@@ -1486,7 +1464,7 @@ Starting from  $K$
 
 \begin{frame}[allowframebreaks]{References}
 \bibliographystyle{apalike}
- \small{\bibliography{biblio}}
+ \small{\bibliography{biblio_ecostat}}
   \end{frame}
   
   

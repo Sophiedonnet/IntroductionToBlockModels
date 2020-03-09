@@ -20,7 +20,7 @@ VACHER, C., PIOU, D. and DESPREZ-LOUSTAU, M.-L. (2008). Architecture of an antag
 
 ```{r import dataset,  echo = TRUE}
 rm(list=ls())
-load('../data/fungi_tree_data.Rdata')
+load('fungi_tree_data.Rdata')
 ls()
 ```
 
@@ -40,10 +40,11 @@ species host)
 - We will also need the ggplot2, igraph and alluvial packages.
 
 ```{r load pack,  echo = TRUE,message=FALSE}
-library(blockmodels)
-library(igraph)
-library(alluvial)
 library(ggplot2)
+library(igraph)
+library(blockmodels)
+library(alluvial)
+
 ```
 - For this class, we wrote additional ad-hoc functions. They are in the following file: 
 ```{r source function,  echo = TRUE, message=FALSE}
