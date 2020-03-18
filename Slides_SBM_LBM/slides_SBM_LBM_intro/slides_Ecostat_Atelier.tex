@@ -524,7 +524,7 @@ where $b$ is the Bernoulli distribution and $p\in[0,1]$ a probability for a link
 
 
 %-------------------------------------------------------------------------------------
-\subsection{SBM}
+\subsection[SBM]{Stochastic Block Model}
 
 \begin{frame}  \frametitle{Stochastic Block Model}
 
@@ -865,7 +865,7 @@ Details  given later.
 
 %-------------------------------------------------------------------------------------
 
-\subsection{LBM}
+\subsection[LBM]{Latent block models}
 %reseau interaction qcq
 
 \begin{frame}{Probabilistic model for binary  bipartite networks}
@@ -1316,7 +1316,6 @@ As a consequence:
  \begin{itemize}
  \item  Selection of the number of clusters  $K$ (or $K_1$, $K_2$ in the LBM)
 \item   Integrated Classification Likelihood (ICL)   \textcolor{blue}{\cite{biernacki2000assessing}}
- \end{itemize}
  
 
 \begin{equation}\label{eq:ICL}
@@ -1325,6 +1324,14 @@ ICL(\M) =\log  \ell_c(\Xall,\hat{\bZ}; \hat \theta_{\bK})-  \pen(\M)
  where  \begin{equation}\label{eq:Zhat}
 \hat{Z}_i ^q = \argmax_{k \in \{1, \dots, K_q\}}  \hat{\tau}_{ik}^q. 
 \end{equation} 
+\item   Integrated Complete Likelihood (ICL)  % \textcolor{blue}{\cite{biernacki2000assessing}}
+
+ 
+
+\begin{equation}\label{eq:ICL}
+ICL(\M) =\mathbb{E}_{p(\cdot | \bY, \hat \theta_{\bK})}[\log  \ell_c(\Xall,\hat{\bZ}; \hat \theta_{\bK})-  \pen(\M)
+\end{equation}
+ \end{itemize}
 
 \end{frame}
 
@@ -1376,7 +1383,7 @@ $$
 
 \begin{block}{Conjecture}
 \begin{eqnarray*}
- BIC(\Mcal)  &=&   \left[\log \ell(\Xall; \hat{\theta}, \Mcal)\right] - \mbox{pen}(\Mcal)
+ BIC(\Mcal)  &=&  \log \ell(\Xall; \hat{\theta}, \Mcal) - \mbox{pen}(\Mcal)
 \end{eqnarray*}
 with the same penalty
  \end{block}
@@ -1384,7 +1391,7 @@ with the same penalty
 \begin{itemize}
 \item Under this conjecture
 \begin{eqnarray*}
- ICL(\Mcal)  &= & BIC(\Mcal)  +   \sum_{\Zall} p(\bZ | \Xall; \theta) \log p(\bZ | \Xall; \theta)\\
+ ICL(\Mcal)  &= & BIC(\Mcal)  +   \sum_{\Zall} p(\bZ | \Xall;\hat \theta_{\bK}) \log p(\bZ | \Xall; \hat \theta_{\bK})\\
  &=& BIC(\Mcal)  -   \mathcal{H}( p(\cdot | \Xall; \theta)) 
 \end{eqnarray*}
 \item As a consequence, because of the entropy,  ICL  will encourage clustering with well-separated groups 

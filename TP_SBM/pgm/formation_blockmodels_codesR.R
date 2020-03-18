@@ -41,6 +41,7 @@ Q
 ## ----extract param SBM, echo=TRUE, eval = TRUE-------------------------------------------------------------------------------------------------
 paramEstimSBM <- extractParamBM(sbm.tree_bin,Q)
 paramEstimSBM$pi
+
 paramEstimSBM$alpha
 paramEstimSBM$Z
 

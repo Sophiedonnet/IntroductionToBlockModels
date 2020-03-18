@@ -1,7 +1,7 @@
 ---
 title: "Introduction to SBM and LBM. Practice"
 author: "Sophie Donnet & Sarah Ouadah"
-date: "18 janvier 2019"
+date: "Mars 2020. Ecostats"
 output: html_document
 editor_options: 
   chunk_output_type: console
