@@ -37,7 +37,7 @@ species host)
 # Useful packages
 
 - R-package blockmodels to infer Stochastic Block Model [SBM] and Latent Block model [LBM] on ecological networks
-```{r install GSBM,  echo = TRUE,message=FALSE}
+```{r install GSBM,  echo = TRUE,eval = FALSE, message=FALSE}
 library(devtools)
 install_github("GrossSBM/GSBM")
 ```
@@ -45,6 +45,10 @@ install_github("GrossSBM/GSBM")
 ```{r library  GSBM,  echo = TRUE,message=FALSE}
 library(GSBM)
 ```
+
+
+
+
 
 GSBM is a common interface for all the pacakges developed in our unity (and friends) and dealing with the topological inference for complex networks. We use unified notations. 
 
@@ -55,6 +59,7 @@ GSBM is a common interface for all the pacakges developed in our unity (and frie
 library(ggplot2)
 library(igraph)
 library(alluvial)
+source('function_for_blockmodels.R')
 ```
 
 <!-- - For this class, we wrote additional ad-hoc functions. They are in the following file:  -->
@@ -90,23 +95,19 @@ simpleSBM refers to standard networks (w.r.t. bipartite)
 
 - Then we apply the inference method
  
-```{r estimate SBM, echo=TRUE, eval = FALSE}
+```{r estimate SBM, echo=TRUE, eval = TRUE}
 sbm.tree_bin <- estimateSimpleSBM(
   tree_bin,
   model = "bernoulli", directed = FALSE
 )
 ```
 
-```{r save SBM, echo=FALSE, eval = FALSE}
-save(sbm.tree_bin,file='res_sbm_tree_bin.Rdata')
-``` 
+
 ![](../Plot/ICL_tree_bin.png)
 
 - The various points correspond to several runs of the estimation (resulting into a model selection criteria value) for a given number of clusters (denoted $Q$ here).
 - The GSBM returns the better model (number of blocks selected with respect to the ICL criteria).
-```{r  load SBM, echo=FALSE, eval = TRUE}
-load(file='../results/res_sbm_tree_bin.Rdata')
-```
+
 ```{r select SBM, echo=TRUE, eval = TRUE}
 sbm.tree_bin$nbBlocks
 ``` 
@@ -116,7 +117,7 @@ sbm.tree_bin$nbBlocks
 ```{r extract param SBM, echo=TRUE, eval = TRUE}
 sbm.tree_bin$blockProp
 sbm.tree_bin$connectParam$mu
-paramEstimSBM$Z
+sbm.tree_bin$memberships
 ```
 
 - One can plot the reorganized matrix according to the clustering.
@@ -127,11 +128,11 @@ plot(sbm.tree_bin,type = 'data',ordered = TRUE)
 
 - Finally one can plot the macroview of the network.
 
-```{r plot BM network treebin,  echo=TRUE, eval = FALSE}
+```{r plot BM network treebin,  echo=TRUE, eval = TRUE}
 G <- graph_from_adjacency_matrix(sbm.tree_bin$connectParam$mu, mode = c("undirected"), weighted = TRUE, diag = TRUE)
 plot.igraph(G,vertex.size=sbm.tree_bin$blockProp*100,edge.width=abs(E(G)$weight)*3,vertex.color=1:sbm.tree_bin$nbBlocks, layout=layout_nicely)
 ``` 
-![](../Plot/BMnet_treebin.png)
+
 
 - The composition of the clusters/blocks are given by:  
 ```{r list names blocks,  echo=TRUE, eval = TRUE}
@@ -169,9 +170,7 @@ sbm.tree <- estimateSimpleSBM(
 ![](../Plot/ICL_tree_poisson.png)
 
 - We obtain the best numbers of clusters (with respect to the ICL criteria)
-```{r sload SBM poisson,echo=FALSE, eval =TRUE}
-load('../results/res_sbm_tree.Rdata')
-```
+ 
 
 
 ```{r select SBM poisson, echo=TRUE, eval = TRUE}
@@ -198,7 +197,7 @@ plot(sbm.tree, type = 'data',ordered = TRUE)
 G <- graph_from_adjacency_matrix(sbm.tree$connectParam$mu, mode = c("undirected"), weighted = TRUE, diag = TRUE)
 plot.igraph(G,vertex.size=sbm.tree$blockProp*100,edge.width=abs(E(G)$weight)*3,vertex.color=1:sbm.tree$nbBlocks, layout=layout_nicely)
 ``` 
-![](../Plot/BMnet_tree.png)
+ 
 
 - The composition of the clusters/blocks are given by :  
 ```{r list names blocks Poisson,  echo=TRUE, eval = TRUE}
@@ -236,14 +235,11 @@ We can also use the Blockmodels package to estimate the parameters described pre
 
 
 
-```{r covar SBM,echo=TRUE,eval=FALSE}
+```{r covar SBM,echo=TRUE,eval= TRUE}
 sbm.cov <- estimateSimpleSBM(netMat =tree,model = 'poisson',directed =FALSE, covariates  = ListVar)
 ```
 
 - We select the best number of clusters (with respect to the ICL criteria)
-```{r load SBM covar, echo=FALSE, eval = TRUE}
-load(file='../results/res_sbm_cov.Rdata')
-```
 
 ```{r select SBM covar, echo=TRUE, eval = TRUE}
 Q <- sbm.cov$nbBlocks
