@@ -39,11 +39,11 @@ species host)
 - R-package blockmodels to infer Stochastic Block Model [SBM] and Latent Block model [LBM] on ecological networks
 ```{r install GSBM,  echo = TRUE,eval = FALSE, message=FALSE}
 library(devtools)
-install_github("GrossSBM/GSBM")
+install_github("GrossSBM/sbm")
 ```
 (skip updates of dependecies if you have troubles)
 ```{r library  GSBM,  echo = TRUE,message=FALSE}
-library(GSBM)
+library(sbm)
 ```
 
 
@@ -59,13 +59,8 @@ GSBM is a common interface for all the pacakges developed in our unity (and frie
 library(ggplot2)
 library(igraph)
 library(alluvial)
-source('function_for_blockmodels.R')
 ```
 
-<!-- - For this class, we wrote additional ad-hoc functions. They are in the following file:  -->
-<!-- ```{r source function,  echo = TRUE, message=FALSE} -->
-<!-- source('function_for_blockmodels.R') -->
-<!-- ``` -->
 
 
 # Stochastic Block Model for Binary Network
@@ -77,8 +72,7 @@ We consider that two trees are in interaction if they host at least one common f
 - Plot of the adjacency matrix:
 
 ```{r  tree tree bin plot, echo=TRUE} 
-
-plotMatrix(Mat = tree_bin,rowFG = 'tree', colFG  = 'tree')
+plotMyMatrix(tree_bin,rowLabel = 'Tree', colLabel = 'Tree')
 ```
 
 
@@ -123,14 +117,14 @@ sbm.tree_bin$memberships
 - One can plot the reorganized matrix according to the clustering.
 
 ```{r plot org treeb bin,  echo=TRUE, eval = TRUE}
-plot(sbm.tree_bin,type = 'data',ordered = TRUE)
+plot(sbm.tree_bin,type = 'data',ordered = TRUE,colLabel = 'tree', rowLabel = 'tree' )
 ``` 
 
 - Finally one can plot the macroview of the network.
 
 ```{r plot BM network treebin,  echo=TRUE, eval = TRUE}
-G <- graph_from_adjacency_matrix(sbm.tree_bin$connectParam$mu, mode = c("undirected"), weighted = TRUE, diag = TRUE)
-plot.igraph(G,vertex.size=sbm.tree_bin$blockProp*100,edge.width=abs(E(G)$weight)*3,vertex.color=1:sbm.tree_bin$nbBlocks, layout=layout_nicely)
+G <- graph_from_adjacency_matrix(sbm.tree_bin$connectParam$mean, mode = c("undirected"), weighted = TRUE, diag = TRUE)
+plot.igraph(G,vertex.size=sbm.tree_bin$blockProp*100,edge.width=abs(E(G)$weight)*3,vertex.color = 1:sbm.tree_bin$nbBlocks, layout = layout_nicely)
 ``` 
 
 
@@ -149,7 +143,7 @@ In the weighted tree-tree interactions network, each edge is valued with the num
 - Plot of the adjacency matrix:
 
 ```{r  tree tree plot, echo=TRUE} 
-plotMatrix(Mat = tree,rowFG = 'tree', colFG  = 'tree')
+plotMyMatrix(tree,rowLabel = 'Tree', colLabel = 'Tree')
 ```
 
 ## Model and inference
@@ -187,14 +181,14 @@ sbm.tree$memberships
 - One can plot the reorganized matrix according to the clustering.
 
 ```{r plot org tree ,  echo=TRUE, eval = TRUE}
-plot(sbm.tree, type = 'data',ordered = TRUE)
+plot(sbm.tree_bin,type = 'data',ordered = TRUE,colLabel = 'tree', rowLabel = 'tree' )
 ``` 
 
 - One can plot the macroview of the network.
 
 
 ```{r plot BM network tree poisson, echo=TRUE, eval = FALSE}
-G <- graph_from_adjacency_matrix(sbm.tree$connectParam$mu, mode = c("undirected"), weighted = TRUE, diag = TRUE)
+G <- graph_from_adjacency_matrix(sbm.tree$connectParam$mean, mode = c("undirected"), weighted = TRUE, diag = TRUE)
 plot.igraph(G,vertex.size=sbm.tree$blockProp*100,edge.width=abs(E(G)$weight)*3,vertex.color=1:sbm.tree$nbBlocks, layout=layout_nicely)
 ``` 
  
@@ -255,12 +249,12 @@ sbm.cov$memberships
 
 
 ```{r plot org tree  cov,  echo=TRUE, eval = TRUE}
-plot(sbm.cov,type='data', ordered = TRUE)
+plot(sbm.cov,type='data', ordered = TRUE, colLabel = 'Tree', rowLabel = 'Tree')
 ``` 
 
 ```{r plot BM network tree cov,  echo=TRUE, eval = FALSE}
-G <- graph_from_adjacency_matrix(paramEstimSBMPoissonCov$lambda, mode = c("undirected"), weighted = TRUE, diag = TRUE)
-plot.igraph(G,vertex.size = paramEstimSBMPoissonCov$pi*100,edge.width=sqrt(abs(E(G)$weight)),vertex.color = 1:Q, layout = layout_nicely)
+G <- graph_from_adjacency_matrix(sbm.cov$connectParam$mean, mode = c("undirected"), weighted = TRUE, diag = TRUE)
+plot.igraph(G,vertex.size = sbm.cov$blockProp*100,edge.width=sqrt(abs(E(G)$weight)),vertex.color = 1:sbm.cov$nbBlocks, layout = layout_nicely)
 ``` 
 
 ![](../Plot/BMnet_poissoncov.png)
@@ -285,12 +279,12 @@ alluvial(B[,c(1,2,3)],freq = B$Freq)
 # Latent Block model 
 
 ## Dataset : fungus-tree interactions
-In the fungi-tree interactions network, an edge indicates if a tree species host a fungal species. 
+In the fungi-tree interactions network, an edge indicates if a tree species hosts a fungal species. 
 
 - Plot of the incidence matrix
 
 ```{r  tree fungis plot, echo=TRUE} 
-plotMatrix(Mat = fungi_tree,rowFG = 'fungi', colFG  = 'tree')
+plotMyMatrix(Mat = fungi_tree,rowLabel = 'fungi', colLabel  = 'tree')
 ```
 
 We can know try to get a clustering of fungus and tree species conjointly. 
@@ -310,11 +304,11 @@ We can know try to get a clustering of fungus and tree species conjointly.
 lbm <- estimateBipartiteSBM(as.matrix(fungi_tree),model = 'bernoulli')
 ```
 ```{r LBM save,echo=FALSE,eval=FALSE}
-save(lbm,file='res_lbm.Rdata')
+#save(lbm,file='res_lbm.Rdata')
 ``` 
 
 ```{r LBM load,echo=FALSE,eval=TRUE}
-load(file='../results/res_lbm.Rdata')
+#load(file='../results/res_lbm.Rdata')
 ``` 
 
 
@@ -335,11 +329,11 @@ lbm$memberships$col
 
 
 ```{r plot org  tree fungis,  echo=TRUE, eval = TRUE}
-plot(lbm, type ='data',ordered= TRUE)
+plot(lbm, type ='data',ordered= TRUE, rowLabel = 'Fungi', colLabel = 'Tree')
 ``` 
 
 ```{r plot BM network tree fungi,  echo=TRUE, eval = TRUE}
-G <- graph_from_incidence_matrix(lbm$connectParam$mu, weighted = TRUE)
+G <- graph_from_incidence_matrix(lbm$connectParam$mean, weighted = TRUE)
 plot(G,vertex.size=c(lbm$blockProp$row*100, lbm$blockProp$row*100), vertex.shape=c("circle", "square")[V(G)$type +1], edge.width=abs(E(G)$weight*2),vertex.color=1:sum(lbm$nbBlocks), layout=layout.bipartite)
 ``` 
 
