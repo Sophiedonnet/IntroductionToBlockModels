@@ -181,7 +181,7 @@ sbm.tree$memberships
 - One can plot the reorganized matrix according to the clustering.
 
 ```{r plot org tree ,  echo=TRUE, eval = TRUE}
-plot(sbm.tree_bin,type = 'data',ordered = TRUE,colLabel = 'tree', rowLabel = 'tree' )
+plot(sbm.tree,type = 'data',ordered = TRUE,colLabel = 'tree', rowLabel = 'tree' )
 ``` 
 
 - One can plot the macroview of the network.
@@ -300,7 +300,7 @@ We can know try to get a clustering of fungus and tree species conjointly.
 
 
 
-```{r LBM,echo=TRUE,eval=FALSE}
+```{r LBM,echo=TRUE,eval=TRUE}
 lbm <- estimateBipartiteSBM(as.matrix(fungi_tree),model = 'bernoulli')
 ```
 ```{r LBM save,echo=FALSE,eval=FALSE}
