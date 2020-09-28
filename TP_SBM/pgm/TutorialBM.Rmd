@@ -20,8 +20,11 @@ knitr::opts_chunk$set(
 
 
 ```{r wd, eval = TRUE, echo = FALSE}
-setwd("/home/sophie/WORK/RECHERCHE/FORMATIONS_CHERCHEURS/FORMATIONS_RESEAUX/IntroductionToBlockModels/TP_SBM/pgm")
 ``` 
+
+
+![Fungus on tree](Tree-Fungus.jpg){width=150px} 
+
 
 ##  Requirements
 
@@ -32,14 +35,15 @@ This version is available on github.
 `GREMLIN` is an other package we developed (not yet on the CRAN). We will use it next time. But it is required in sbm. 
 
 First be sure that you have the `devtools` package
-```{r install, message=FALSE, warning=FALSE}
+```{r install, message=FALSE, warning=FALSE, eval=FALSE, echo = TRUE}
 library(devtools)
 devtools::install_github('Demiperimetre/GREMLIN')
 devtools::install_github('GrossSBM/sbm',ref = 'multipartite')
-library(sbm)
 ``` 
 
-
+```{r}
+library(sbm)
+```
  
 
 The packages required for the analysis are `sbm` plus some others for data manipulation and representation:
@@ -50,6 +54,8 @@ library(knitr)
 ```
 
 ## Data set: antagonistic tree/fungus interaction network
+
+
 
 We consider the fungus-tree interaction network studied by @tree_fungus_network, available with the package **sbm**:
 
