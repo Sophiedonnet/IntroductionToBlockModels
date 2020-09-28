@@ -3,7 +3,7 @@
 %\documentclass[10pt, green, handout]{beamer}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[frenchb]{babel} % le document est en français
+\usepackage[english]{babel} % le document est en français
 \usepackage{rotating,amsmath}
 \usepackage{graphicx,cancel}       % pour ins\'erer des figures
         % pour d\'efinir plus de couleurs
@@ -272,21 +272,22 @@ This distinction only makes sense for simple networks (not bipartite).
 \begin{frame}
 \frametitle{Network representation and adjacency matrix}
 
+For a non-directed network
  \begin{columns}
  \begin{column}{.45\paperwidth}
 $$Y=\left(
 \begin{array}{rrrrr}
-0 & 1 & 0 & 0 \\ 
-1 & 0 & 1 & 1 \\ 
-0 & 0 & 0 & 0 \\ 
-1 & 1 & 0 & 0 \\ 
+ 0 & 1 & 0 & 1 \\ 
+ 1 & 0 & 1 & 1 \\ 
+ 0 & 1 & 0 & 0 \\ 
+ 1 & 1 & 0 & 0 \\ 
 \end{array}\right)
 $$
 \end{column}
 
 \begin{column}{.5\paperwidth}
 
-\includegraphics[scale=.3]{plots/graphe_adj.pdf}
+\includegraphics[scale=.5]{plots/graphe_adj.png}
 
 \end{column}
 
@@ -294,11 +295,42 @@ $$
 
 \begin{itemize}
 \item $n$ rows and $n$ columns,
-\item symmetric or not.
+\item symmetric   matrix
 \end{itemize}
 
 \end{frame}
+%-------------------------------------------------------------------------------------
 
+\begin{frame}
+\frametitle{Network representation and adjacency matrix}
+
+For a directed network
+ \begin{columns}
+ \begin{column}{.45\paperwidth}
+$$Y=\left(
+\begin{array}{rrrrr}
+0 & 1 & 1 & 1 \\ 
+ 1 & 0 & 0 & 1 \\ 
+ 1 & 0 & 0 & 0 \\ 
+ 0 & 0 & 0 & 0 \\ 
+\end{array}\right)
+$$
+\end{column}
+
+\begin{column}{.5\paperwidth}
+
+\includegraphics[scale=.5]{plots/graphe_adj_dir.png}
+
+\end{column}
+
+\end{columns}
+
+\begin{itemize}
+\item $n$ rows and $n$ columns,
+\item symmetric   matrix
+\end{itemize}
+
+\end{frame}
 
 
 %-------------------------------------------------------------------------------------
@@ -309,10 +341,11 @@ $$
  \begin{column}{.45\paperwidth}
 $$Y=\left(
 \begin{array}{rrrrrrr}
-1 &   0 &   1 &   0 &   0 &   0 &   1 \\ 
-0 &   0 &   0 &   0 &   0 &   0 &   0 \\ 
-0 &   0 &   0 &   1 &   0 &   1 &   0 \\ 
-0 &   1 &   0 &   0 &   1 &   1 &   0 \\ \end{array}\right)
+0 &   0 &   1 &   1 &   0 &   0 &   0 \\ 
+   0 &   1 &   0 &   0 &   1 &   1 &   0 \\ 
+   0 &   0 &   1 &   0 &   0 &   0 &   0 \\ 
+  0 &   0 &   0 &   0 &   1 &   1 &   0 \\ 
+\end{array}\right)
 $$
 
 
@@ -335,7 +368,7 @@ $$
 
 \begin{column}{.5\paperwidth}
 
-\includegraphics[scale=.3]{plots/graphe_bipartite.pdf}
+\includegraphics[scale=.5]{plots/graphe_bipartite.png}
 
 \end{column}
 

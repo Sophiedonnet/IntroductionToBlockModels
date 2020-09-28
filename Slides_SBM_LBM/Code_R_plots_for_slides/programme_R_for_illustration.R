@@ -1,8 +1,7 @@
-#setwd("~/Dropbox/Multiplex/Ecologie/Exposes/2017-06-Inecol-Xalapa/Code_R_plots")
+
 library(ggplot2)
 library(sna)
-setwd("D:/Dropbox/Multiplex/Ecologie/Exposes/2017-06-Inecol-Xalapa/Code_R_plots")
-
+setwd("~/WORK/RECHERCHE/FORMATIONS_CHERCHEURS/FORMATIONS_RESEAUX/IntroductionToBlockModels/Slides_SBM_LBM/Code_R_plots_for_slides")
 
 ############" SIMULATION FOR SBM
 source('func_sampling.R')
@@ -39,13 +38,13 @@ ggplot(data = melted_sbm, aes(x=Var1, y=Var2, fill=value)) + geom_tile()
 ################# matrix reordered according to groups
 w = order(sbm$cl)
 
-sbm_ord = sbm$X[w,w]; 
+sbm_ord = sbm$X[w,w];
 
 dim(sbm_ord)
 melted_sbm_ord <- melt(sbm_ord)
 head(melted_sbm_ord)
-ggplot(data = melted_sbm_ord, aes(x=Var1, y=Var2, fill=value)) + geom_tile()+theme(axis.text.x = element_text(angle = 45, vjust = 1, 
+ggplot(data = melted_sbm_ord, aes(x=Var1, y=Var2, fill=value)) + geom_tile()+theme(axis.text.x = element_text(angle = 45, vjust = 1,
                                                                                                              size = 12, hjust = 1))
 
-theme(axis.text.x = element_text(angle = 45, vjust = 1, 
+theme(axis.text.x = element_text(angle = 45, vjust = 1,
                                  size = 12, hjust = 1))
