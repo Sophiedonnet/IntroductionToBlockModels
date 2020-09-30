@@ -258,12 +258,12 @@ lapply(1:mySimpleSBMPoisson$nbBlocks,
        function(q){fungusTreeNetwork$tree_names[mySimpleSBMPoisson$memberships == q]})
 ```
 
-We are interested in comparing the two cluterings. To do so we use the alluvial flow plots.
+We are interested in comparing the two clusterings. To do so we use the alluvial flow plots.
 
 ```{r alluvial, echo=TRUE,eval=TRUE}
 listMemberships <- list(binarySBM = mySimpleSBM$memberships)
 listMemberships$weightSBM <- mySimpleSBMPoisson$memberships
-plotAlluvial(listMemberships)
+P <- plotAlluvial(listMemberships)
 ```
 
 
