@@ -37,7 +37,6 @@ This version is available on github.
 First be sure that you have the `devtools` package
 ```{r install, message=FALSE, warning=FALSE, eval=FALSE, echo = TRUE}
 library(devtools)
-devtools::install_github('Demiperimetre/GREMLIN')
 devtools::install_github('GrossSBM/sbm',ref = 'multipartite')
 ``` 
 
@@ -107,10 +106,10 @@ and infer this model with `sbm` (used package : `blockmodels`). Note that `simpl
 load(file ='allResultsTreeFungus.rda')
 ``` 
 
-```{r simpleSBM print,eval = FALSE, echo = TRUE}
+```{r simpleSBM print,eval = TRUE, echo = TRUE}
 mySimpleSBM <- tree_tree_binary %>%
   estimateSimpleSBM("bernoulli", 
-                    dimLabels = list(row = 'tree', col = 'tree'), 
+                    dimLabels ='tree', 
                     estimOptions = list(verbosity = 0, plot=FALSE))
 ```
 
@@ -207,11 +206,11 @@ Here again, we look for some latent structure of the network by adjusting a simp
 \end{align*}
 
 
-```{r simpleSBM Poisson, eval   = FALSE, echo = TRUE}
+```{r simpleSBM Poisson, eval   = TRUE, echo = TRUE}
 mySimpleSBMPoisson <- tree_tree %>%
   estimateSimpleSBM("poisson", 
                     estimOptions = list(verbosity = 0 , plot = FALSE),
-                    dimLabels = c('tree','tree'))
+                    dimLabels = c('tree'))
 ```
 
 ![ICL_tree_poisson](ICL_tree_poisson.png)
@@ -281,12 +280,12 @@ We can also use the `sbm` package to estimate the parameters of the SBM with cov
 
 
 
-```{r covar SBM,echo= TRUE,eval= FALSE}
+```{r covar SBM,echo= TRUE,eval= TRUE}
 mySimpleSBMCov<- estimateSimpleSBM(
   netMat = as.matrix(tree_tree),
   model = 'poisson',
   directed =FALSE,
-  dimLabels =list(row='tree',col='tree'), 
+  dimLabels =c('tree'), 
   covariates  = fungusTreeNetwork$covar_tree,
   estimOptions = list(verbosity = 0))
 ```
@@ -347,11 +346,11 @@ We set the following model:
 
 
 
-```{r tree_fungi_bipartite network, eval= FALSE, echo = TRUE}
+```{r tree_fungi_bipartite network, eval=TRUE, echo = TRUE}
 myBipartiteSBM <- estimateBipartiteSBM(
   netMat = as.matrix(fungusTreeNetwork$fungus_tree),
   model = 'bernoulli',
-  dimLabels=list(row = 'fungis',col = 'tree'),
+  dimLabels=c(row = 'fungis',col = 'tree'),
   estimOptions = list(verbosity = 0))
 ```
 

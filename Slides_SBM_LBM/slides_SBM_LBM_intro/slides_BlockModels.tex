@@ -7,7 +7,7 @@
 \usepackage{rotating,amsmath}
 \usepackage{graphicx,cancel}       % pour ins\'erer des figures
         % pour d\'efinir plus de couleurs
-\usetheme{Malmoe}  %Applique le theme INRA (ce dernier doit être present dans le repertoire courant)
+\usetheme{metropolis} 
 \usepackage{xcolor,colortbl}
 \usepackage{array}
 \usepackage{mdframed}
@@ -17,17 +17,21 @@
 \usetikzlibrary{positioning,shapes,arrows}
 
 
-\definecolor{dgreen}{RGB}{102,193,191}
+%\definecolor{dgreen}{RGB}{102,193,191}
+\definecolor{dgreen}{RGB}{235, 129, 27}
+
 \definecolor{lgreen}{RGB}{0,140,142}
+\definecolor{mygreen}{RGB}{20, 176, 61}
+
 %\setbeamercolor{structure}{fg=INRA@dinst}
 
 \setbeamertemplate{blocks}[rounded][shadow=true]
-\setbeamercolor{block title}{use = structure , fg=dgreen, bg = dgreen!35}
-\setbeamercolor{normal text}{fg=black,bg=white}
-\setbeamercolor{alerted text}{fg=lgreen}
-\setbeamercolor{example text}{fg=lgreen}
-\setbeamercolor{structure}{fg=dgreen} %d'où ce bleu par défaut
-\setbeamercolor{background canvas}{parent=normal text}
+%\setbeamercolor{block title}{use = structure , fg=dgreen, bg = dgreen!35}
+%\setbeamercolor{normal text}{fg=black,bg=white}
+%\setbeamercolor{alerted text}{fg=lgreen}
+%\setbeamercolor{example text}{fg=lgreen}
+%\setbeamercolor{structure}{fg=dgreen} %d'où ce bleu par défaut
+%\setbeamercolor{background canvas}{parent=normal text}
 
 
  \usepackage{tikz}
@@ -36,12 +40,12 @@
 
 
 
-\addtobeamertemplate{navigation symbols}{}{%
-    \usebeamerfont{footline}%
-    \usebeamercolor[fg]{footline}%
-    \hspace{1em}%
-    \insertframenumber/\inserttotalframenumber
-}
+%\addtobeamertemplate{navigation symbols}{}{%
+%    \usebeamerfont{footline}%
+%    \usebeamercolor[fg]{footline}%
+%    \hspace{1em}%
+%    \insertframenumber/\inserttotalframenumber
+%}
 %\pgfdeclareimage[height=\paperheight,width=\paperwidth]{intro}{plots/plante-insecte-ombre-COLLAGE.jpg}
 %\setbeamertemplate{background canvas}{\pgfuseimage{intro}}
 
@@ -126,11 +130,11 @@ pdfproducer = {INRA}%
 \newcommand{\bm}{\mathbf{m}}
 
 
-\title{Probabilistic models for  networks}%titre premiere page
+\title{Probabilistic models for  ecological networks}%titre premiere page
 
 %\subtitle{Presentation Soustitre}sp
 
-\author{UMR Mia Paris (S. Donnet, S. Robin, S. Ouadah...) }
+\author{Sophie  Donnet.  MIA Paris-Saclay, UMR  INRAE - AgroParisTech,  }
 
 
 
@@ -396,14 +400,14 @@ $$
 
 \item Degree distribution, can be viewed as a measure of heterogeneity,
 \item Nestedness: a network is said to be nested when its nodes that have the smallest degree, are connected to nodes with the highest degree,
-\textcolor{blue}{\cite{Rodriguez2006}}
+\textcolor{mygreen}{\cite{Rodriguez2006}}
 
 \item Betweenness centrality: for a node, numbers of shortest paths between any pair of nodes passing through this node.
-\textcolor{blue}{\cite{FREEMAN1978215}}
+\textcolor{mygreen}{\cite{FREEMAN1978215}}
 
 \item Modularity: is a measure for a given partition of its tendency of favoring intra-connection over inter-connection.  
 $\Rightarrow$ Finding the best partition with respect to modularity criterion. 
-\textcolor{blue}{\cite{clauset2008hierarchical}}
+\textcolor{mygreen}{\cite{clauset2008hierarchical}}
 \end{itemize}
 \end{frame}
 
@@ -420,7 +424,7 @@ All this criterion shall be adapted to:
 
 \bigskip
 
-\textcolor{blue}{R packages: igraph, sna, vegan.} 
+\textcolor{mygreen}{R packages: igraph, sna, vegan.} 
 
 
 \end{frame}
@@ -442,7 +446,7 @@ All this criterion shall be adapted to:
 \end{itemize}
 
 
-\textcolor{blue}{\cite{kefi}}
+\textcolor{mygreen}{\cite{kefi}}
 
 \end{frame}
 
@@ -526,7 +530,7 @@ All this criterion shall be adapted to:
 \begin{frame}
 \frametitle{A first random graph model for network: null model}
 
-\textcolor{blue}{Erd\H{o}s-Rényi (1959)} Model for $n$ nodes 
+\textcolor{mygreen}{Erd\H{o}s-Rényi (1959)} Model for $n$ nodes 
 
 $$\forall 1\le i,j\le n,\quad Y_{ij}\overset{i.i.d.}{\sim} b(p),$$
 where $b$ is the Bernoulli distribution and $p\in[0,1]$ a probability for a link to exist. 
@@ -561,7 +565,7 @@ where $b$ is the Bernoulli distribution and $p\in[0,1]$ a probability for a link
 
 \begin{frame}  \frametitle{Stochastic Block Model}
 
-\textcolor{blue}{\cite{nowickiSnijders2001}}
+\textcolor{mygreen}{\cite{nowickiSnijders2001}}
 Let ($Y_{ij}$) be an adjacency matrix 
 
 \begin{block}{Latent variables}
@@ -836,11 +840,11 @@ Y_{ij} \ | \ \{i\in\textcolor{yellow!40!orange}{\bullet},j\in\textcolor{blue!80!
     \medskip
 
     
-    \textcolor{blue}{\cite{nowickiSnijders2001}, \cite{daudin2008mixture}}
+    \textcolor{mygreen}{\cite{nowickiSnijders2001}, \cite{daudin2008mixture}}
     
     \bigskip
     
-\textcolor{blue}{R package: blockmodels.}
+\textcolor{mygreen}{R package: blockmodels.}
 %     
 %     \begin{thebibliography}{99}
 %       \begin{scriptsize}
@@ -933,7 +937,7 @@ $(Y_{ij})$ independent and
 \end{block}
  
 
-\textcolor{blue}{\cite{Govaert2008}}
+\textcolor{mygreen}{\cite{Govaert2008}}
 
 \end{frame}
 
@@ -987,8 +991,8 @@ Y_{ij} \ | \ \{i\in\textcolor{red}{\bullet},j\in\textcolor{yellow}{\bullet}\}
 \end{align*}
 
 
-\textcolor{blue}{\cite{Govaert2008}} and 
-\textcolor{blue}{R package: blockmodels} as well.
+\textcolor{mygreen}{\cite{Govaert2008}} and 
+\textcolor{mygreen}{R package: blockmodels} as well.
 
 \end{frame}
 
@@ -1026,7 +1030,7 @@ Y_{ij} \ | \ \{i\in\textcolor{red}{\bullet},j\in\textcolor{yellow}{\bullet}\}
 \sim^{\text{ind}} \mathcal{P}(\lambda_{\textcolor{yellow!40!orange}{\bullet}\textcolor{blue!80!black}{\bullet}})$,
  \item Gaussian distribution: $Y_{ij} \ | \ \{i\in\textcolor{yellow!40!orange}{\bullet},j\in\textcolor{blue!80!black}{\bullet}\}
 \sim^{\text{ind}} \mathcal{N}(\mu_{\textcolor{yellow!40!orange}{\bullet}\textcolor{blue!80!black}{\bullet}},\sigma^2)$,
-\textcolor{blue}{\cite{mariadassou2010uncovering}}
+\textcolor{mygreen}{\cite{mariadassou2010uncovering}}
 \item More generally, 
   $$Y_{ij} \ | \ \{i\in\textcolor{yellow!40!orange}{\bullet},j\in\textcolor{blue!80!black}{\bullet}\}
 \sim^{\text{ind}} \mathcal{F}(\theta_{\textcolor{yellow!40!orange}{\bullet}\textcolor{blue!80!black}{\bullet}})$$
@@ -1061,13 +1065,13 @@ $$\mathbb{P}(Y^a_{ij},Y^b_{ij} = w  | Z_i  = k, Z_j = \ell)  = \alpha^w _{k\ell}
 
 \end{block}
 
-\textcolor{blue}{
+\textcolor{mygreen}{
 \cite{kefi}, \cite{barbillon2017stochastic}}
 
-In \textcolor{blue}{R package: blockmodels} when two relations are at stake.
+In \textcolor{mygreen}{R package: blockmodels} when two relations are at stake.
  
 
- \textbf{Remark:} a particular case of multiplex network is dynamic network, \textcolor{blue}{\cite{matias2017statistical}}.
+ \textbf{Remark:} a particular case of multiplex network is dynamic network, \textcolor{mygreen}{\cite{matias2017statistical}}.
  
 
  \end{frame}
@@ -1246,7 +1250,7 @@ $$\mathcal{I}_{\theta}(\mathcal{R}_{\Xall,\btau})  = \log \ell(\Xall; \theta) \L
 \end{frame}
 
 %----------------------------------------------------------------------------------------------
- \begin{frame}{Proof}
+ \begin{frame}[allowframebreaks]{Proof}
 
 By Bayes
 \begin{eqnarray*}
@@ -1263,7 +1267,7 @@ By integration against $\mathcal{R}_{\Xall,\btau}$ :
 As a consequence: 
 \begin{eqnarray*}
 \mathcal{I}_{\theta}(\mathcal{R}_{\Xall,\btau}) &=& \log \ell(\Xall ; \theta) -   \mathbf{KL}[\mathcal{R}_{\Xall,\btau}, p(\cdot | \Xall; \theta)] \\
- &=& \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau}} [\log \ell_c(\bX,\bZ; \theta)] -  \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau}} [ \log  p(\bZ | \Xall; \theta)] \\
+ &=& \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau}} [\log \ell_c(\bX,\bZ; \theta)] -  \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau}} [ \log  p(\bZ | \Xall; \theta)]  \\
 && -   \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau}} \left[\log \frac{\mathcal{R}_{\Xall,\btau}(\bZ)} { p(\bZ | \Xall; \theta)}\right]\\
 &=&  \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau}} [\log \ell_c(\bX,\bZ; \theta)] -  \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau}} [ \log  p(\bZ | \Xall; \theta)] \\
 && -   \underbrace{\mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau}} [\log \mathcal{R}_{\Xall,\btau}(\bZ)]}_{  \mathcal{H}\left(\mathcal{R}_{\Xall,\btau}(\bZ)\right) } +  \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau}} [\log p(\bZ | \Xall; \theta)]
@@ -1348,7 +1352,7 @@ As a consequence:
 
  \begin{itemize}
  \item  Selection of the number of clusters  $K$ (or $K_1$, $K_2$ in the LBM)
-\item   Integrated Classification Likelihood (ICL)   \textcolor{blue}{\cite{biernacki2000assessing}}
+\item   Integrated Classification Likelihood (ICL)   \textcolor{mygreen}{\cite{biernacki2000assessing}}
  
 
 \begin{equation}\label{eq:ICL}
@@ -1357,7 +1361,7 @@ ICL(\M) =\log  \ell_c(\Xall,\hat{\bZ}; \hat \theta_{\bK})-  \pen(\M)
  where  \begin{equation}\label{eq:Zhat}
 \hat{Z}_i ^q = \argmax_{k \in \{1, \dots, K_q\}}  \hat{\tau}_{ik}^q. 
 \end{equation} 
-\item   Integrated Complete Likelihood (ICL)  % \textcolor{blue}{\cite{biernacki2000assessing}}
+\item   Integrated Complete Likelihood (ICL)  % \textcolor{mygreen}{\cite{biernacki2000assessing}}
 
  
 
@@ -1481,9 +1485,9 @@ Starting from  $K$
 \begin{frame}{Other extensions}
 
 \begin{itemize}
-\item  Time evolving networks \textcolor{blue}{Matias} 
-\item  Multipartite networks (\textcolor{blue}{R-package GREMLIN, Bar-Hen, Barbillon, Donnet}) 
-\item Multilevel networks (individuals and organizations)  (\textcolor{blue}{Chabbert-Liddell})
+\item  Time evolving networks \textcolor{mygreen}{Matias} 
+\item  Multipartite, Multiplexe networks (\textcolor{mygreen}{R-package  sbm, Bar-Hen, Barbillon, Donnet}) 
+\item Multilevel networks (individuals and organizations)  (\textcolor{mygreen}{Chabbert-Liddell})
  \item Missing data in the network,
 \end{itemize}
 \end{frame}
