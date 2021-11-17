@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 \beamer@slide {eq:lik}{39}
 \beamer@slide {eq:vraismarg}{39}
+=======
+\beamer@slide {eq:lik}{40}
+\beamer@slide {eq:vraismarg}{40}
+>>>>>>> master
 \beamer@slide {eq:ICL}{50}
 \beamer@slide {eq:Zhat}{50}
 \beamer@slide {eq:ICL}{50}

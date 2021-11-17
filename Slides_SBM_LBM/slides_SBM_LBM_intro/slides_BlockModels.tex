@@ -331,7 +331,7 @@ $$
 
 \begin{itemize}
 \item $n$ rows and $n$ columns,
-\item symmetric   matrix
+\item non symmetric   matrix
 \end{itemize}
 
 \end{frame}
@@ -355,16 +355,7 @@ $$
 
 \begin{itemize}
  \item n rows and m columns, rectangular matrix.
- \item corresponding adjacency matrix $(n+m)\times(n+m)$:
- $$
- \left(
- \begin{array}{rr}
-  0 & Y\\
-  Y^T & 0
- \end{array}
- \right)
- $$
-\end{itemize}
+ \end{itemize}
 
 
 
@@ -398,7 +389,8 @@ $$
 % ref a mettre et sans doute à partager en plusieurs slides à la siute
 \begin{itemize}
 
-\item Degree distribution, can be viewed as a measure of heterogeneity,
+\item Degree of a node: number of connexion for each node. 
+\item Degree distribution can be viewed as a measure of heterogeneity,
 \item Nestedness: a network is said to be nested when its nodes that have the smallest degree, are connected to nodes with the highest degree,
 \textcolor{mygreen}{\cite{Rodriguez2006}}
 
@@ -526,6 +518,17 @@ All this criterion shall be adapted to:
 %-------------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------------
 
+\begin{frame}{Probabilistic approach}
+\begin{itemize}
+\item 
+\alert{Context}: our   matrix $Y$ is the realization of a stochastic process.
+\item 
+\alert{Aim}: Propose a  stochastic process is able to mimic heterogeneity in the connections.  
+\item \alert{Advantage}: benefit from the statistical tools (tests,  model selection, etc...)  
+\end{itemize}
+
+\end{frame}
+
 
 \begin{frame}
 \frametitle{A first random graph model for network: null model}
@@ -551,10 +554,10 @@ where $b$ is the Bernoulli distribution and $p\in[0,1]$ a probability for a link
  
  
 \begin{itemize}
+\item  Homogeneity of the connections
  \item Degree distribution too concentrated, no high degree nodes,
  \item All nodes are equivalent (no nestedness...),
- \item No modularity.
-
+ \item No modularity, no hubs
  \end{itemize}
 
 \end{frame}

@@ -35,7 +35,7 @@ This version is available on github.
 `GREMLIN` is an other package we developed (not yet on the CRAN). We will use it next time. But it is required in sbm. 
 
 First be sure that you have the `devtools` package
-```{r install, message=FALSE, warning=FALSE, eval=FALSE, echo = TRUE}
+```{r install, message=FALSE, warning=FALSE, eval=TRUE, echo = TRUE}
 library(devtools)
 devtools::install_github('GrossSBM/sbm',ref = 'multipartite')
 ``` 
@@ -65,10 +65,10 @@ str(fungusTreeNetwork,  max.level = 1)
 
 This data set provides information about $154$ fungi sampled on $51$ tree species. It is a list with the following entries:
 
-- `fungus_names`: list of the fungus species names
 - `tree_names` : list of the tree species names
-- `fungus_tree` : binary fungus-tree interactions
+- `fungus_names`: list of the fungus species names
 - `tree_tree` : weighted tree-tree interactions (number of common fungal species two tree species host)
+- `fungus_tree` : binary fungus-tree interactions
 - `covar_tree` : covariates associated to pairs of trees (namely genetic, taxonomic and geographic distances)
 
 
@@ -121,7 +121,6 @@ Once fitted, the user can manipulate the fitted model by accessing the various f
 
 ```{r simpleSBMfit}
 class(mySimpleSBM)
-mySimpleSBM
 ```
 
 For instance,
@@ -139,8 +138,7 @@ plot(mySimpleSBM, type = "data", dimLabels = list(row = 'tree', col = 'tree'))
 
 One can also plot the expected network which, in case of the Bernoulli model, corresponds to the probability of connection between any pair of nodes in the network.
 ```{r simpleSBMfit plot2}
-plot(mySimpleSBM, type = "expected", 
-     dimLabels = list(row = 'tree', col = 'tree'))
+plot(mySimpleSBM, type = "expected", dimLabels = list(row = 'tree', col = 'tree'))
 ```
 
 Finally one can plot the mesoscopic view of the network.
@@ -370,8 +368,7 @@ plot(myBipartiteSBM, type = "expected")
 ```
 
 ```{r plot BM network tree fungi,  echo=TRUE, eval = TRUE}
-plot(myBipartiteSBM, type = "meso",
-     plotOptions = list(vertex.size=c(1,2) , edge.width  = 2))
+plot(myBipartiteSBM, type = "meso", plotOptions = list(vertex.size=c(0.5,1) , edge.width  = 1))
 ``` 
 
 
