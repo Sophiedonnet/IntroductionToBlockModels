@@ -1193,7 +1193,7 @@ If $K = 1$ : all the connection heterogeneity is explained by the covariates.
 $$
  
   \begin{block}{Remark}
-$\boldsymbol{\mathcal{Z}} =  \mathop{\otimes}_{q=0\dots Q} \{1,\dots, K_q\}^{n_q}$ \color{dgreen} $\Rightarrow$ \color{black}  when  $K$ and $n$ increase, impossible to compute. 
+$\boldsymbol{\mathcal{Z}} =   \{1,\dots, K\}^{n}$ \color{dgreen} $\Rightarrow$ \color{black}  when  $K$ and $n$ increase, impossible to compute. 
  \end{block}
  
 \color{dgreen} \textbf{Standard tool to maximize the likelihood when latent variables involved} \color{black} : EM  algorithm.  
@@ -1294,7 +1294,7 @@ As a consequence:
 \item \textbf{Benefit} : we choose   $\mathcal{R}_{\Xall,\btau}$  such that the maximization calculus can be done explicitly
  \begin{itemize}
  \item In our case: mean field approximation : neglect dependencies between the  $(Z_i)$ 
- $$P_{\mathcal{R}_{\Xall,\btau}}(Z^q_i=k) = \tau_{ik}^q$$
+ $$P_{\mathcal{R}_{\Xall,\btau}}(Z_i=k) = \tau_{ik}$$
   \end{itemize}
 
 
@@ -1362,7 +1362,7 @@ As a consequence:
 ICL(\M) =\log  \ell_c(\Xall,\hat{\bZ}; \hat \theta_{\bK})-  \pen(\M)
 \end{equation}
  where  \begin{equation}\label{eq:Zhat}
-\hat{Z}_i ^q = \argmax_{k \in \{1, \dots, K_q\}}  \hat{\tau}_{ik}^q. 
+\hat{Z}_i = \argmax_{k \in \{1, \dots, K\}}  \hat{\tau}_{ik}. 
 \end{equation} 
 \item   Integrated Complete Likelihood (ICL)  % \textcolor{mygreen}{\cite{biernacki2000assessing}}
 

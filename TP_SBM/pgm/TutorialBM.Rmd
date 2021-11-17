@@ -35,7 +35,7 @@ This version is available on github.
 `GREMLIN` is an other package we developed (not yet on the CRAN). We will use it next time. But it is required in sbm. 
 
 First be sure that you have the `devtools` package
-```{r install, message=FALSE, warning=FALSE, eval=TRUE, echo = TRUE}
+```{r install, message=FALSE, warning=FALSE, eval=FALSE, echo = TRUE}
 library(devtools)
 devtools::install_github('GrossSBM/sbm',ref = 'multipartite')
 ``` 
@@ -138,7 +138,7 @@ plot(mySimpleSBM, type = "data", dimLabels = list(row = 'tree', col = 'tree'))
 
 One can also plot the expected network which, in case of the Bernoulli model, corresponds to the probability of connection between any pair of nodes in the network.
 ```{r simpleSBMfit plot2}
-plot(mySimpleSBM, type = "expected", dimLabels = list(row = 'tree', col = 'tree'))
+plot(mySimpleSBM, type = "expected", dimLabels = list(row = 'tree', col = 'tree'),estimOptions=list(legend=TRUE))
 ```
 
 Finally one can plot the mesoscopic view of the network.
@@ -206,7 +206,7 @@ Here again, we look for some latent structure of the network by adjusting a simp
 
 ```{r simpleSBM Poisson, eval   = TRUE, echo = TRUE}
 mySimpleSBMPoisson <- tree_tree %>%
-  estimateSimpleSBM("poisson", 
+  estimateSimpleSBM("poisson", directed = FALSE,
                     estimOptions = list(verbosity = 0 , plot = FALSE),
                     dimLabels = c('tree'))
 ```
