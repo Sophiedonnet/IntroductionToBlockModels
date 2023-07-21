@@ -1,0 +1,40 @@
+"0","mySampler
+"
+"1","Simple Stochastic Block Model"
+"1"," "
+"1","--"
+"1"," "
+"1","bernoulli"
+"1"," "
+"1","variant
+"
+"1","=====================================================================
+"
+"1","Dimension = ("
+"1"," "
+"1","50"
+"1"," "
+"1",") - ("
+"1"," "
+"1","3"
+"1"," "
+"1",") blocks and"
+"1"," "
+"1","no"
+"1"," "
+"1","covariate(s).
+"
+"1","=====================================================================
+"
+"1","* Useful fields 
+"
+"1","  $nbNodes, $modelName, $dimLabels, $nbBlocks, $nbCovariates, $nbDyads
+"
+"1","  $blockProp, $connectParam, $covarParam, $covarList, $covarEffect 
+"
+"1","  $expectation, $indMemberships, $memberships 
+"
+"1","* R6 and S3 methods 
+"
+"1","  $rNetwork, $rMemberships, $rEdges, plot, print, coef 
+"

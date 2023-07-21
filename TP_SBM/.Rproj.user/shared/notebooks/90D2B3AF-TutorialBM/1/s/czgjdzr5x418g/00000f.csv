@@ -1,0 +1,4 @@
+"0","K = 3; "
+"0","nbNodes  <- 50"
+"0","blockProp <- c(.25, 0.5 ,.25) # group proportions"
+"0","connectParam <- list(mean = diag(.4, 3) + 0.05) # connectivity matrix: affiliation network"

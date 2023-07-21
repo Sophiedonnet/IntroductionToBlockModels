@@ -1,0 +1,1 @@
+"0","plot(mySimpleSBM, type = ""expected"",estimOptions=list(legend=TRUE))"

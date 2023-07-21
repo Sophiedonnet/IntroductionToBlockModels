@@ -1,0 +1,57 @@
+{
+    "sources": [
+        {
+            "author": [
+                {
+                    "family": "Vacher",
+                    "given": "Corinne"
+                },
+                {
+                    "family": "Piou",
+                    "given": "Dominique"
+                },
+                {
+                    "family": "Desprez-Loustau",
+                    "given": "Marie-Laure"
+                }
+            ],
+            "container-title": "PloS one",
+            "id": "tree_fungus_network",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "page": "e1740",
+            "publisher": "Public Library of Science",
+            "title": "Architecture of an antagonistic tree/fungus network: the asymmetric influence of past evolutionary history",
+            "title-short": "Architecture of an antagonistic tree/fungus network",
+            "type": "article-journal",
+            "volume": "3"
+        },
+        {
+            "author": [
+                {
+                    "family": "Leger",
+                    "given": "Jean-Benoist"
+                }
+            ],
+            "container-title": "arXiv preprint arXiv:1602.07587",
+            "id": "blockmodels",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "title": "Blockmodels: A R-package for estimating in Latent Block Model and Stochastic Block Model, with various probability functions, with or without covariates",
+            "title-short": "Blockmodels",
+            "type": "article-journal"
+        }
+    ],
+    "project_biblios": []
+}
