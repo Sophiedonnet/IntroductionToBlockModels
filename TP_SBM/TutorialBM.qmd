@@ -446,7 +446,9 @@ shinySbm::run_app()
 The sbm package is able to handle multipartite networks, meaning that they involve more that two types of nodes and intra and inter groups connections. 
 
 
-See the [vignette](https://cran.r-project.org/web/packages/sbm/vignettes/Multipartite_EcologicalNetwork.html) here 
+See the [vignette](https://cran.r-project.org/web/packages/sbm/vignettes/Multipartite_EcologicalNetwork.html). 
+
+We analyse the data from @Dattilo with the method proposed by  @multipartite. 
 
 ```{r }
 data(multipartiteEcologicalNetwork)

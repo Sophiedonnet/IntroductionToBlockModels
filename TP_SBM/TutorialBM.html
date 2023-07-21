@@ -103,7 +103,7 @@ div.csl-indent {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Tutorial on Stochastic Block Models</h1>
-<p class="subtitle lead">9th Channel Network Conference, Wageningen, Aug.&nbsp;2023</p>
+<p class="subtitle lead">Aug.&nbsp;2023</p>
 </div>
 
 
@@ -955,7 +955,8 @@ div.csl-indent {
 <section id="what-if-i-have-more-than-2-types-of-nodes" class="level1">
 <h1>4. What if I have more than 2 types of nodes?</h1>
 <p>The sbm package is able to handle multipartite networks, meaning that they involve more that two types of nodes and intra and inter groups connections.</p>
-<p>See the <a href="https://cran.r-project.org/web/packages/sbm/vignettes/Multipartite_EcologicalNetwork.html">vignette</a> here</p>
+<p>See the <a href="https://cran.r-project.org/web/packages/sbm/vignettes/Multipartite_EcologicalNetwork.html">vignette</a>.</p>
+<p>We analyse the data from <span class="citation" data-cites="Dattilo">Dáttilo et al. (<a href="#ref-Dattilo" role="doc-biblioref">2016</a>)</span> with the method proposed by <span class="citation" data-cites="multipartite">Bar-Hen, P., and S. (<a href="#ref-multipartite" role="doc-biblioref">To appear</a>)</span>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(multipartiteEcologicalNetwork)</span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>Net <span class="ot">&lt;-</span> multipartiteEcologicalNetwork</span>
@@ -1011,6 +1012,12 @@ div.csl-indent {
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-multipartite" class="csl-entry" role="listitem">
+Bar-Hen, A, Barbillon P., and Donnet S. To appear. <span>“Block Models for Multipartite Networks.applications in Ecology and Ethnobiology.”</span> <em>Statistical Modelling</em>, To appear.
+</div>
+<div id="ref-Dattilo" class="csl-entry" role="listitem">
+Dáttilo, Wesley, Nubia Lara-Rodrı́guez, Pedro Jordano, Paulo R. Guimarães, John N. Thompson, Robert J. Marquis, Lucas P. Medeiros, Raul Ortiz-Pulido, Maria A. Marcos-Garcı́a, and Victor Rico-Gray. 2016. <span>“Unravelling <span>D</span>arwin<span>’</span>s Entangled Bank: Architecture and Robustness of Mutualistic Networks with Multiple Interaction Types.”</span> <em>Proceedings of the Royal Society of London B: Biological Sciences</em> 283 (1843).
+</div>
 <div id="ref-tree_fungus_network" class="csl-entry" role="listitem">
 Vacher, Corinne, Dominique Piou, and Marie-Laure Desprez-Loustau. 2008. <span>“Architecture of an Antagonistic Tree/Fungus Network: The Asymmetric Influence of Past Evolutionary History.”</span> <em>PloS One</em> 3 (3): e1740.
 </div>
