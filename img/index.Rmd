@@ -1,0 +1,74 @@
+---
+title: "Sophie Donnet"
+output: 
+  html_document:
+   logo: img/LogoINRAE-MIA.jpg
+   number_sections: false
+   css: style.css
+   includes:
+     before_body: extlogo.html
+---
+
+<br>
+  
+
+<img src="img/sophie_donnet_profil2022.png" alt="mpe" width = "280px" align="right"> </img>
+ 
+  
+I am a statistics researcher at  [INRAE](https://www.inrae.fr/) @ [MIA Paris Saclay](https://mia-ps.inrae.fr/).
+
+Currently, I am
+
+  * Vice head (DUA) of [MIA Paris Saclay](https://mia-ps.inrae.fr/). 
+  * Head of the team [SOLsTIS](https://mia-ps.inrae.fr/solstis) (Statistical mOdelling and Learning for environnemenT and lIfe Sciences).  
+
+
+Our lab is located at [Campus Agro Paris-Saclay](https://www.agroparistech.fr/lecole/ecole-8-sites/campus-agro-paris-saclay) in Palaiseau (Plateau de Saclay). 
+
+
+<br>
+  
+
+## News.  Scientific bootcamp "Les mouettes savantes"  
+
+With [Anna Bonnet](https://anna.biogeek.land/) and [Marie-Pierre Etienne](https://marieetienne.github.io/), we are organizing a scientific bootcamp for   high school girls. Please visit [our website](https://marieetienne.github.io/lesmouettessavantes/)! 
+  
+  
+
+
+## Research 
+
+I am specialized in the development of **statistical learning methods for ecology and life sciences** in general.  More details [here](research.html). I work with [people from different backgrounds: statisticians, ecologists...](collaborators.html)
+
+  
+  
+ 
+<br>
+
+<br>
+    
+## Contact information
+
+
+
+- <i class="fas fa-map-marker"></i> UMR MIA-Paris-Saclay, AgroParisTech, INRAE, </br>
+  22 place de l’Agronomie, </br>
+  91120 Palaiseau</br>
+  
+
+- <i class="fa fa-phone"></i> +33 (0)1 89 10 09 38
+
+- <i class="fa fa-at"></i> <a href="mailto:sophie.donnet@inrae.fr
+">sophie [dot] donnet  [at] inrae [dot] fr</a>
+
+
+
+ 
+<br>
+
+<br>
+
+    
+
+
+ <font size="1">  *Photo prise par Jean-Baptiste Denis à l'occasion de la journée en l'honneur de Eric Parent.*  </font >

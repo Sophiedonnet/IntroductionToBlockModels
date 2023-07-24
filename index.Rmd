@@ -1,0 +1,80 @@
+---
+title: "Probabilistic models for networks"
+output: 
+  html_document:
+   toc: false
+   logo: img/LogoINRAE-MIA.jpg
+   number_sections: false
+   highlight: tango
+   css: style.css
+   includes:
+     before_body: extlogo.html
+bibliography: TP_SBM/references.bib
+link-citations: true     
+---
+
+
+<br> 
+
+
+<img src="img/sophie_donnet_profil2022.png" alt="Sophie Donnet 2022" width = "240px" align="center"> </img>
+
+<img src="img/NetworkImage.png" alt="Ecological network" width = "240px" align="right"> </img>
+
+Ecological networks are made up of nodes, representing biological entities of interest and edges representing the interaction being studied.  Stochastic block models (SBMs) and their extension to bipartite networks are convenient tools to modelize heterogeneity in (ecological) networks by introducing blocks of nodes sharing the same pattern of connection.  This short-course presents SBMs for unipartite, bipartite or more complex networks and illustrates their flexibility.
+
+You will find here all the material I use for my 3 hours  class on **probabilistic models for network analysis**. 
+
+<br> 
+
+<br> 
+
+
+  * Here are the slides of the course
+      - The first part in an introduction to block models [Part 1](Slides_SBM_LBM/part1_SMB_LBM_donnet.pdf)
+      - The second part in on the modelling of a collection of networks [Part 2](Slides_Col_SBM/part3_ColSBM.pdf). This part is based on  @chabert2022,  available on [arxiv](https://arxiv.org/pdf/2206.00560.pdf).  
+  
+  * This class will include a tutorial session. 
+      - The tutorial is in R and can be found [here](TP_SBM/TutorialBM.html)
+      - It is mainly based on the  R-package [`sbm`](https://cran.r-project.org/web/packages/sbm/index.html).   Please find informations [here](https://grosssbm.github.io/sbm/). 
+      - Some additional R packages are needed. 
+      - The tutorial will rely on the fungus-tree interaction network studied by @tree_fungus_network, available with the package `sbm`. 
+      
+      
+```{r, eval  = FALSE, echo = TRUE }
+install.packages("sbm")
+install.packages("GGally") # To plot networks
+install.packages('network') 
+install.packages('RColorBrewer') # to have nice colors
+install.packages('knitr') # to plot nice tables
+```
+<br> 
+
+
+  - Note that a shiny application is also proposed. You can either use it online [here](https://shiny.migale.inrae.fr/app/ShinySBM) or install it on your machine
+
+```{r install shiny, eval = FALSE}
+remotes::install_github("Jo-Theo/shinySbm")
+shinySbm::run_app()
+``` 
+  
+
+<br> 
+
+
+  * The second part of the course will  use the R package `colSBM` available on [Github](https://rdrr.io/github/Chabert-Liddell/colSBM/f/README.Rmd). 
+  
+  
+  <br> 
+  
+  <br> 
+  
+
+Additional material on Stochastic Block Models can be found in @AubertChap6. 
+
+ 
+<br>  
+ 
+# References 
+    
+    
