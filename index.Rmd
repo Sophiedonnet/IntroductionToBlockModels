@@ -31,8 +31,8 @@ You will find here all the material I use for my 3 hours  class on **probabilist
 
 
   * Here are the slides of the course
-      - The first part in an introduction to block models [Part 1](Slides_SBM_LBM/part1_SMB_LBM_donnet.pdf)
-      - The second part in on the modelling of a collection of networks [Part 2](Slides_Col_SBM/part3_ColSBM.pdf). This part is based on  @chabert2022,  available on [arxiv](https://arxiv.org/pdf/2206.00560.pdf).  
+      - The first part in an **Introduction to block models** [Part 1](Slides_SBM_LBM/part1_SMB_LBM_donnet.pdf)
+      - The second part in on the **Modelling of a collection of networks** [Part 2](Slides_Col_SBM/part3_ColSBM.pdf). This part is based on  @chabert2022,  available on [arxiv](https://arxiv.org/pdf/2206.00560.pdf).  
   
   * This class will include a tutorial session. 
       - The tutorial is in R and can be found [here](TP_SBM/TutorialBM.html)
@@ -63,14 +63,19 @@ shinySbm::run_app()
 
 
   * The second part of the course will  use the R package `colSBM` available on [Github](https://rdrr.io/github/Chabert-Liddell/colSBM/f/README.Rmd). 
-  
+
+
+```{r install colSBM, eval = FALSE}
+remotes::install_github("Chabert-Liddell/colSBM")
+``` 
+
   
   <br> 
   
   <br> 
   
 
-Additional material on Stochastic Block Models can be found in @AubertChap6. 
+Additional material on Stochastic Block Models can be found the book Chapter 6 *Using Latent Block Models to Detect Structure in Ecological Networks*  in @AubertChap6. 
 
  
 <br>  
