@@ -432,13 +432,20 @@ We (T. Vanrenterghem (INRAE))  are developing a Shiny application to help people
   - You can either use it online [here](https://shiny.migale.inrae.fr/app/ShinySBM).
   - Or install it on your machine
 
-```{r install shiny}
+```{r install shiny, eval = FALSE}
 remotes::install_github("Jo-Theo/shinySbm")
 shinySbm::run_app()
 ``` 
 
 
-**Exercice** Test the Shiny app with your own data set or in the one of the @ThompsonTownsend paper (available [here](https://)).  
+**Exercice** Test the Shiny app with your own data set or in the one of the @thompson2003impacts paper (available in the colSBM package).
+```{r run On foddweb, eval = FALSE}
+remotes::install_github("Chabert-Liddell/colSBM")
+library(colSBM)
+data("foodwebs")
+write.csv(foodwebs[[1]],file="myNetwork.csv") 
+```
+
 
 
 # 4. What if I have more than 2 types of nodes? 

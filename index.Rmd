@@ -39,6 +39,8 @@ You will find here all the material I use for my 3 hours  class on **probabilist
       - It is mainly based on the  R-package [`sbm`](https://cran.r-project.org/web/packages/sbm/index.html).   Please find informations [here](https://grosssbm.github.io/sbm/). 
       - Some additional R packages are needed. 
       - The tutorial will rely on the fungus-tree interaction network studied by @tree_fungus_network, available with the package `sbm`. 
+      - We will also use the dataset of @thompson2003impacts provided in the colSBM package
+      
       
       
 ```{r, eval  = FALSE, echo = TRUE }
@@ -67,6 +69,7 @@ shinySbm::run_app()
 
 ```{r install colSBM, eval = FALSE}
 remotes::install_github("Chabert-Liddell/colSBM")
+data("foodwebs")
 ``` 
 
   
