@@ -438,7 +438,7 @@ shinySbm::run_app()
 ``` 
 
 
-**Exercice** Test the Shiny app with your own data set or this one. 
+**Exercice** Test the Shiny app with your own data set or in the one of the @ThompsonTownsend paper (available [here](https://)).  
 
 
 # 4. What if I have more than 2 types of nodes? 
