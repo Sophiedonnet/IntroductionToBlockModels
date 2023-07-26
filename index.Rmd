@@ -12,34 +12,58 @@ output:
 bibliography: TP_SBM/references.bib
 link-citations: true     
 ---
+<img src="img/sophie_donnet_profil2022.png" alt="Ecological network" width = "240px" align="center"> </img>
+
+<br> 
+You will find here all the material I use for my 3 hours  class on **probabilistic models for network analysis**. 
+
 
 
 <br> 
 
+<br> 
 
-<img src="img/sophie_donnet_profil2022.png" alt="Sophie Donnet 2022" width = "240px" align="center"> </img>
+
 
 <img src="img/NetworkImage.png" alt="Ecological network" width = "240px" align="right"> </img>
 
+ 
+
+
+
+<br> 
+
+
+### **Introduction** 
+
 Ecological networks are made up of nodes, representing biological entities of interest and edges representing the interaction being studied.  Stochastic block models (SBMs) and their extension to bipartite networks are convenient tools to modelize heterogeneity in (ecological) networks by introducing blocks of nodes sharing the same pattern of connection.  This short-course presents SBMs for unipartite, bipartite or more complex networks and illustrates their flexibility.
 
-You will find here all the material I use for my 3 hours  class on **probabilistic models for network analysis**. 
 
 <br> 
 
+
+
+### **Material for the theoretical part** 
+
+
+Here are the slides of the course
+
+  - The first part is an **Introduction to block models** [Part 1](Slides_SBM_LBM/part1_SMB_LBM_donnet.pdf)
+  - The second part will adress  the **Modelling of a collection of networks** [Part 2](Slides_Col_SBM/part3_ColSBM.pdf). This part is based on  @chabert2022,  available on [arxiv](https://arxiv.org/pdf/2206.00560.pdf).   This second part will be dealt with only if we have time.
+
+ 
+
+Additional material on Stochastic Block Models can be found the book Chapter 6 *Using Latent Block Models to Detect Structure in Ecological Networks*  in @AubertChap6. 
+
 <br> 
 
+### **R-tutorial**
 
-  * Here are the slides of the course
-      - The first part in an **Introduction to block models** [Part 1](Slides_SBM_LBM/part1_SMB_LBM_donnet.pdf)
-      - The second part in on the **Modelling of a collection of networks** [Part 2](Slides_Col_SBM/part3_ColSBM.pdf). This part is based on  @chabert2022,  available on [arxiv](https://arxiv.org/pdf/2206.00560.pdf).  
-  
-  * This class will include a tutorial session. 
-      - The tutorial is in R and can be found [here](TP_SBM/TutorialBM.html)
-      - It is mainly based on the  R-package [`sbm`](https://cran.r-project.org/web/packages/sbm/index.html).   Please find informations [here](https://grosssbm.github.io/sbm/). 
-      - Some additional R packages are needed. 
-      - The tutorial will rely on the fungus-tree interaction network studied by @tree_fungus_network, available with the package `sbm`. 
-      - We will also use the dataset of @thompson2003impacts provided in the colSBM package
+This class will include an R-tutorial session available [here](TP_SBM/TutorialBM.html)
+
+  - It is mainly based on the  R-package [`sbm`](https://cran.r-project.org/web/packages/sbm/index.html).   Please find informations [here](https://grosssbm.github.io/sbm/). 
+  - Some additional R packages are needed. 
+    
       
       
       
@@ -53,13 +77,15 @@ install.packages('knitr') # to plot nice tables
 <br> 
 
 
-  - Note that a shiny application is also proposed. You can either use it online [here](https://shiny.migale.inrae.fr/app/ShinySBM) or install it on your machine
+  - Note that a shiny application is also proposed. You should install the last version on your machine
 
 ```{r install shiny, eval = FALSE}
 remotes::install_github("Jo-Theo/shinySbm")
 shinySbm::run_app()
 ``` 
-  
+
+It can also be used online [here](https://shiny.migale.inrae.fr/app/ShinySBM).  
+
 
 <br> 
 
@@ -69,20 +95,32 @@ shinySbm::run_app()
 
 ```{r install colSBM, eval = FALSE}
 remotes::install_github("Chabert-Liddell/colSBM")
-data("foodwebs")
 ``` 
 
   
   <br> 
   
   <br> 
-  
 
-Additional material on Stochastic Block Models can be found the book Chapter 6 *Using Latent Block Models to Detect Structure in Ecological Networks*  in @AubertChap6. 
 
+### **Data sets** 
+
+ - The first part of the  tutorial will rely on the fungus-tree interaction network studied by @tree_fungus_network, available with the package `sbm`.  
+ - We may also analyze the multipartite ecological network collected by @Dattilo (also available in `sbm`)
+ - Finally, we will maybe use the dataset of @thompson2003impacts provided in the `colSBM` package
+      
+
+```{r data , eval = FALSE}
+library(sbm)
+data("fungusTreeNetwork")
+data("multipartiteEcologicalNetwork")
+library(colSBM)
+data("foodwebs")
+
+``` 
  
 <br>  
  
-# References 
+### **References** 
     
     

@@ -425,11 +425,17 @@ $(document).ready(function () {
 </div>
 
 
-<p><br></p>
-<p><img src="img/sophie_donnet_profil2022.png" alt="Sophie Donnet 2022" width = "240px" align="center">
+<p><img src="img/sophie_donnet_profil2022.png" alt="Ecological network" width = "240px" align="center">
 </img></p>
+<p><br> You will find here all the material I use for my 3 hours class
+on <strong>probabilistic models for network analysis</strong>.</p>
+<p><br></p>
+<p><br></p>
 <p><img src="img/NetworkImage.png" alt="Ecological network" width = "240px" align="right">
 </img></p>
+<p><br></p>
+<div id="introduction" class="section level3">
+<h3><strong>Introduction</strong></h3>
 <p>Ecological networks are made up of nodes, representing biological
 entities of interest and edges representing the interaction being
 studied. Stochastic block models (SBMs) and their extension to bipartite
@@ -437,38 +443,37 @@ networks are convenient tools to modelize heterogeneity in (ecological)
 networks by introducing blocks of nodes sharing the same pattern of
 connection. This short-course presents SBMs for unipartite, bipartite or
 more complex networks and illustrates their flexibility.</p>
-<p>You will find here all the material I use for my 3 hours class on
-<strong>probabilistic models for network analysis</strong>.</p>
 <p><br></p>
-<p><br></p>
+</div>
+<div id="material-for-the-theoretical-part" class="section level3">
+<h3><strong>Material for the theoretical part</strong></h3>
+<p>Here are the slides of the course</p>
 <ul>
-<li>Here are the slides of the course
-<ul>
-<li>The first part in an <strong>Introduction to block models</strong>
+<li>The first part is an <strong>Introduction to block models</strong>
 <a href="Slides_SBM_LBM/part1_SMB_LBM_donnet.pdf">Part 1</a></li>
-<li>The second part in on the <strong>Modelling of a collection of
+<li>The second part will adress the <strong>Modelling of a collection of
 networks</strong> <a href="Slides_Col_SBM/part3_ColSBM.pdf">Part 2</a>.
 This part is based on <span class="citation">Chabert-Liddell, Barbillon,
 and Donnet (<a href="#ref-chabert2022">2022</a>)</span>, available on <a
-href="https://arxiv.org/pdf/2206.00560.pdf">arxiv</a>.</li>
-</ul></li>
-<li>This class will include a tutorial session.
+href="https://arxiv.org/pdf/2206.00560.pdf">arxiv</a>. This second part
+will be dealt with only if we have time.</li>
+</ul>
+<p>Additional material on Stochastic Block Models can be found the book
+Chapter 6 <em>Using Latent Block Models to Detect Structure in
+Ecological Networks</em> in <span class="citation">Aubert et al. (<a
+href="#ref-AubertChap6">2022</a>)</span>.</p>
+<p><br></p>
+</div>
+<div id="r-tutorial" class="section level3">
+<h3><strong>R-tutorial</strong></h3>
+<p>This class will include an R-tutorial session available <a
+href="TP_SBM/TutorialBM.html">here</a></p>
 <ul>
-<li>The tutorial is in R and can be found <a
-href="TP_SBM/TutorialBM.html">here</a></li>
 <li>It is mainly based on the R-package <a
 href="https://cran.r-project.org/web/packages/sbm/index.html"><code>sbm</code></a>.
 Please find informations <a
 href="https://grosssbm.github.io/sbm/">here</a>.</li>
 <li>Some additional R packages are needed.</li>
-<li>The tutorial will rely on the fungus-tree interaction network
-studied by <span class="citation">Vacher, Piou, and Desprez-Loustau (<a
-href="#ref-tree_fungus_network">2008</a>)</span>, available with the
-package <code>sbm</code>.</li>
-<li>We will also use the dataset of <span class="citation">Thompson and
-Townsend (<a href="#ref-thompson2003impacts">2003</a>)</span> provided
-in the colSBM package</li>
-</ul></li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;sbm&quot;</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;GGally&quot;</span>) <span class="co"># To plot networks</span></span>
@@ -477,29 +482,49 @@ in the colSBM package</li>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&#39;knitr&#39;</span>) <span class="co"># to plot nice tables</span></span></code></pre></div>
 <p><br></p>
 <ul>
-<li>Note that a shiny application is also proposed. You can either use
-it online <a href="https://shiny.migale.inrae.fr/app/ShinySBM">here</a>
-or install it on your machine</li>
+<li>Note that a shiny application is also proposed. You should install
+the last version on your machine</li>
 </ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;Jo-Theo/shinySbm&quot;</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>shinySbm<span class="sc">::</span><span class="fu">run_app</span>()</span></code></pre></div>
+<p>It can also be used online <a
+href="https://shiny.migale.inrae.fr/app/ShinySBM">here</a>.</p>
 <p><br></p>
 <ul>
 <li>The second part of the course will use the R package
 <code>colSBM</code> available on <a
 href="https://rdrr.io/github/Chabert-Liddell/colSBM/f/README.Rmd">Github</a>.</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;Chabert-Liddell/colSBM&quot;</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;foodwebs&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;Chabert-Liddell/colSBM&quot;</span>)</span></code></pre></div>
 <p><br></p>
 <p><br></p>
-<p>Additional material on Stochastic Block Models can be found the book
-Chapter 6 <em>Using Latent Block Models to Detect Structure in
-Ecological Networks</em> in <span class="citation">Aubert et al. (<a
-href="#ref-AubertChap6">2022</a>)</span>.</p>
+</div>
+<div id="data-sets" class="section level3">
+<h3><strong>Data sets</strong></h3>
+<ul>
+<li>The first part of the tutorial will rely on the fungus-tree
+interaction network studied by <span class="citation">Vacher, Piou, and
+Desprez-Loustau (<a href="#ref-tree_fungus_network">2008</a>)</span>,
+available with the package <code>sbm</code>.<br />
+</li>
+<li>We may also analyze the multipartite ecological network collected by
+<span class="citation">Dáttilo et al. (<a
+href="#ref-Dattilo">2016</a>)</span> (also available in
+<code>sbm</code>)</li>
+<li>Finally, we will maybe use the dataset of <span
+class="citation">Thompson and Townsend (<a
+href="#ref-thompson2003impacts">2003</a>)</span> provided in the
+<code>colSBM</code> package</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">library</span>(sbm)</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;fungusTreeNetwork&quot;</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;multipartiteEcologicalNetwork&quot;</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="fu">library</span>(colSBM)</span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;foodwebs&quot;</span>)</span></code></pre></div>
 <p><br></p>
-<div id="references" class="section level1 unnumbered">
-<h1 class="unnumbered">References</h1>
+</div>
+<div id="references" class="section level3 unnumbered">
+<h3 class="unnumbered"><strong>References</strong></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-AubertChap6" class="csl-entry">
 Aubert, Julie, Pierre Barbillon, Sophie Donnet, and Vincent Miele. 2022.
@@ -513,6 +538,15 @@ Chabert-Liddell, Saint-Clair, Pierre Barbillon, and Sophie Donnet. 2022.
 <span>“Learning Common Structures in a Collection of Networks. An
 Application to Food Webs.”</span> arXiv. <a
 href="https://doi.org/10.48550/ARXIV.2206.00560">https://doi.org/10.48550/ARXIV.2206.00560</a>.
+</div>
+<div id="ref-Dattilo" class="csl-entry">
+Dáttilo, Wesley, Nubia Lara-Rodrı́guez, Pedro Jordano, Paulo R.
+Guimarães, John N. Thompson, Robert J. Marquis, Lucas P. Medeiros, Raul
+Ortiz-Pulido, Maria A. Marcos-Garcı́a, and Victor Rico-Gray. 2016.
+<span>“Unravelling <span>D</span>arwin<span>’</span>s Entangled Bank:
+Architecture and Robustness of Mutualistic Networks with Multiple
+Interaction Types.”</span> <em>Proceedings of the Royal Society of
+London B: Biological Sciences</em> 283 (1843).
 </div>
 <div id="ref-thompson2003impacts" class="csl-entry">
 Thompson, R. M., and C. R. Townsend. 2003. <span>“IMPACTS ON STREAM FOOD
