@@ -97,12 +97,13 @@ Convenient tools to encode / represent interactions between entities
 %===================================================================
 \begin{itemize}
 \item Friendship between individuals,  \includegraphics[width=0.1\textwidth]{plots/facebook.png} 
-\item Co-publication between researchers   
 \item Linkedin \includegraphics[width=0.05\textwidth]{plots/linkedIn.png} 
+\item Twitter \includegraphics[width=0.5cm]{plots/twitter.png}
+
+\item Co-publication between researchers   
 \item Advices between lawyers: \alert{oriented relation}
 \item \href{https://www.cs.cmu.edu/~./enron/}{Enron email dataset}
-\item Twitter \includegraphics[width=0.5cm]{plots/twitter.png}
-\item Exchanges of seeds between farmers
+\item Exchanges of seeds between farmers  
 \end{itemize}
 
 
@@ -141,7 +142,7 @@ Pollination\\
 %====================================================================
 \frame{\frametitle{Predation networks: foodwebs}
 %====================================================================
-\cite{thompson2003impacts} Pine-forest stream foodweb  issued from  North-Caroline    ($71$ species, $148$ interactions)
+\textcolor{mygreen}{\cite{thompson2003impacts}} Pine-forest stream foodweb  issued from  North-Caroline    ($71$ species, $148$ interactions)
 
 
 \centering
@@ -180,7 +181,7 @@ Pollination\\
 %====================================================================
 \frame{\frametitle{Parasitism : tree-fungus network} 
 %====================================================================
-\cite{VPD08}  Parasitism relation between $n=51$ tree species and $p = 154$ fungus species 
+\textcolor{mygreen}{\cite{VPD08}}  Parasitism relation between $n=51$ tree species and $p = 154$ fungus species 
 
 \includegraphics[width=\textwidth]{plots/Tree_fungis_network}
 
@@ -220,7 +221,7 @@ Pollination\\
 %====================================================================
 \frame{\frametitle{Parasitism : tree-tree network} 
 %====================================================================
-\cite{VPD08}  Number of shared fungus between any pair of the $n=51$ tree species
+\textcolor{mygreen}{\cite{VPD08}}  Number of shared fungus between any pair of the $n=51$ tree species
 
 \includegraphics[width=\textwidth]{plots/Tree_network}
 
@@ -305,7 +306,7 @@ For each pair of tree species, 3 distances were also measured:
 
 
 %====================================================================
-\begin{frame} \frametitle{Available data}
+\begin{frame} \frametitle{Statistical inference: available data}
 %====================================================================
  
 \begin{center}
@@ -326,7 +327,7 @@ For each pair of tree species, 3 distances were also measured:
 
 
 %=====================================================
-\begin{frame}\frametitle{Goal}
+\begin{frame}\frametitle{Statistical inference: goal}
 %====================================================================
 
  
@@ -337,7 +338,7 @@ For each pair of tree species, 3 distances were also measured:
 
 \begin{itemize}
  \item Unraveling / describing / modeling the network topology. 
- \item Discovering particular structure of interaction between some subsets of nodes.
+ \item Discovering particular structure of interactions between some subsets of nodes.
  \item Understanding node heterogeneity.
  \item Not inferring the network !
  \end{itemize}
@@ -482,7 +483,7 @@ where  $p\in[0,1]$ is the  probability for a link to exist.
 \bigskip
 \centering
 
-`
+ 
 \centering
 Not enough variability in the degree
 \end{frame}
@@ -636,8 +637,8 @@ Y_{ij} \ | \ \{i\in\textcolor{yellow!40!orange}{\bullet},j\in\textcolor{blue!80!
 
 \alert{References}
 \begin{itemize}
- \item Other ways to model heterogeneity in networks \cite{matias2014ESAIM}
-\item Review paper on SBM \cite{Lee2019}
+ \item Other ways to model heterogeneity in networks \textcolor{mygreen}{\cite{matias2014ESAIM}}
+\item Review paper on SBM \textcolor{mygreen}{\cite{Lee2019}}
 \end{itemize}
 
 
@@ -861,14 +862,14 @@ $Y_{ij} \in \{0,1\} ^ Q = (Y_{ij}^a, Y_{ij}^b)$, $\forall w \in \{0,1\}^2$
 
 
 
-$$\mathbb{P}(Y^a_{ij},Y^b_{ij} = w  | Z_i  = k, Z_j = \ell)  = \alpha^w _{k\ell}$$
+$$\mathbb{P}((Y^a_{ij},Y^b_{ij}) = w  | Z_i  = k, Z_j = \ell)  = \alpha^w _{k\ell}$$
 
 \end{block}
 
 \textcolor{mygreen}{
 \cite{kefi}, \cite{barbillon2017stochastic}}
 
-In \textcolor{mygreen}{R package: blockmodels} when two relations are at stake.
+In \textcolor{mygreen}{R package: sbm} when two relations are at stake.
  
 
  \textbf{Remark:} a particular case of multiplex network is dynamic network, \textcolor{mygreen}{\cite{matias2017statistical}}.
@@ -961,7 +962,7 @@ If $K = 1$ : all the connection heterogeneity is explained by the covariates.
 \end{frame}
 
 %====================================================================
-\begin{frame}\frametitle{Statistical Inference}
+\begin{frame}\frametitle{Statistical inference}
 %====================================================================
 \begin{itemize}
 \item Selection of the number of clusters 
@@ -980,7 +981,7 @@ Presented in details for binary SBM.
 %====================================================================
 \subsection{Parameters estimation}
 %====================================================================
-\begin{frame} \frametitle{Likelihood for SBM}
+\begin{frame} \frametitle{Likelihood for Bernoulli SBM}
 %====================================================================
 
  \begin{block}{Complete  likelihood $(\bY)$  et  $(\bZ)$}
@@ -1111,7 +1112,7 @@ $$  p(\bZ | \bX, \theta^{(t-1)}) \neq \prod_{i=1}^n p(Z_i | \bX, \theta^{(t-1)})
 %===================
 
 
-\textcolor{dgreen}{\textbf{Idea}} : replace the complicated distribution $p(\cdot | \Xall; \theta) = [\bZ | \bX, \theta]$ by a simpler one. 
+\textcolor{dgreen}{\textbf{Idea}} : replace the complicated distribution $p(\bZ | \Xall; \theta)$ by a simpler one. 
 
 
 Let $\mathcal{R}_{\Xall,\btau}$ be any distribution on   $\Zall$
@@ -1188,7 +1189,7 @@ As a consequence:
 \begin{block}{Algorithm}
  \noindent At iteration $(t)$, given the current value  $(\theta^{(t-1)},\mathcal{R}_{\Xall, \btau^{(t-1)}})$,
 \begin{enumerate}
-\item[$\bullet$]\textbf{Step 1} Maximization w.r.t. $\tau$
+\item[$\bullet$]\textbf{Step 1 (VE)} Maximization w.r.t. $\tau$
 
 \begin{eqnarray*}
 \btau^{(t)}  &=&  \arg \max_{\btau  \in \mathcal{T}}  \mathcal{I}_{\theta^{(t-1)}}(\mathcal{R}_{\Xall,\btau})\\
@@ -1210,7 +1211,7 @@ Note that
 
 \begin{block}{Algorithm}
 \begin{enumerate}
- \item[$\bullet$]\textbf{Step 2} Maximization  w.r.t.  $\theta$
+ \item[$\bullet$]\textbf{Step 2 (M)} Maximization  w.r.t.  $\theta$
  \begin{eqnarray*}
  \theta^{(t)} &=& \arg \max_{\theta}   \mathcal{I}_{\theta}(\mathcal{R}_{\Xall,\btau^{(t)}}) \\
  &=&   \arg \max_{\theta} \mathbb{E}_{\color{dgreen}\mathcal{R}_{\Xall,\btau^{(t)}}} \left[\log \ell_c(\bX,\bZ;  \theta)   \right]  +   \mathcal{H}\left(\mathcal{R}_{\Xall,\btau^{(t)}}(\bZ)\right)\\
@@ -1452,9 +1453,9 @@ Starting from  $K$
 
 \begin{frame}\frametitle{Theoretical properties for SBM}
 \begin{itemize}
-\item Identifiability and a first consistency result by \color{blue} \cite{celisse2012consistency} \color{black}
-\item Consistency of the posterior distribution of the latent variables \color{blue} \cite{mariadassou2015convergence} \color{black}
-\item Consistency and properties of the variational estimators \color{blue} \cite{bickel2013asymptotic} \color{black}
+\item Identifiability and a first consistency result by \textcolor{mygreen}{\cite{celisse2012consistency} }
+\item Consistency of the posterior distribution of the latent variables \textcolor{mygreen}{\cite{mariadassou2015convergence}}
+\item Consistency and properties of the variational estimators \textcolor{mygreen}{\cite{bickel2013asymptotic} \color{black}}
 \end{itemize}
 \end{frame}
 
@@ -1501,8 +1502,8 @@ Comprehensive R package available on CRAN and Github gathering several block mod
 
 
 
-
-{ \footnotesize Photo from \href{http://androiddeveloper.galileo.edu/android-tutorial/time-to-practice-java-for-android-development/}{this site}}
+\vspace{5em}
+{ \footnotesize Illustration from \href{http://androiddeveloper.galileo.edu/android-tutorial/time-to-practice-java-for-android-development/}{there}}
 
 
 \end{frame}
