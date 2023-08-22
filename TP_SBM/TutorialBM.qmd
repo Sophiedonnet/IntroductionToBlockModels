@@ -122,9 +122,6 @@ connectParam <- list(mean = means)
 
 ## 2.A. The data set: antagonistic tree/fungus interaction network
 
-![](Tree-Fungus.jpg){width="150px"}
-
-
 We consider the fungus-tree interaction network studied by @tree_fungus_network, available with the package `sbm` :
 
 ```{r import dataset}

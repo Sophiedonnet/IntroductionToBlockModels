@@ -59,14 +59,13 @@ Additional material on Stochastic Block Models can be found the book Chapter 6 *
 
 ### **R-tutorial**
 
-This class will include an R-tutorial session available [here](TP_SBM/TutorialBM.html)
+This class will include an R-tutorial session available [here](TP_SBM/TutorialBM.html). 
+You can download the `TutorialBM.qmd` file [here](TP_SBM/TutorialBM.qmd)
 
-  - It is mainly based on the  R-package [`sbm`](https://cran.r-project.org/web/packages/sbm/index.html).   Please find informations [here](https://grosssbm.github.io/sbm/). 
-  - Some additional R packages are needed. 
-    
-      
-      
-      
+It is mainly based on the  R-package [`sbm`](https://cran.r-project.org/web/packages/sbm/index.html).   Please find informations [here](https://grosssbm.github.io/sbm/). 
+
+Some additional R packages are needed. 
+  
 ```{r, eval  = FALSE, echo = TRUE }
 install.packages("sbm")
 install.packages("GGally") # To plot networks
@@ -77,27 +76,27 @@ install.packages('knitr') # to plot nice tables
 <br> 
 
 
-  - Note that a shiny application is also proposed. You should install the last version on your machine
+Note that a shiny application is also proposed. You should install the last version on your machine
 
 ```{r install shiny, eval = FALSE}
 remotes::install_github("Jo-Theo/shinySbm")
 shinySbm::run_app()
 ``` 
 
-It can also be used online [here](https://shiny.migale.inrae.fr/app/ShinySBM).  
+It can also be used online [here](https://shiny.migale.inrae.fr/app/ShinySBM) (not always the latest version).  
 
 
 <br> 
 
 
-  * The second part of the course will  use the R package `colSBM` available on [Github](https://rdrr.io/github/Chabert-Liddell/colSBM/f/README.Rmd). 
-
+In case we have anough time, the second part of the tutorial will deal with collection of networks and we  will  use the R package `colSBM` available on [Github](https://rdrr.io/github/Chabert-Liddell/colSBM/f/README.Rmd). 
 
 ```{r install colSBM, eval = FALSE}
 remotes::install_github("Chabert-Liddell/colSBM")
 ``` 
 
-  
+The tutorial on `colSBM`  is available at [this link](https://chabert-liddell.github.io/colSBM/articles/tutorial.html)   
+ 
   <br> 
   
   <br> 

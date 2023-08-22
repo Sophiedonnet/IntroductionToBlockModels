@@ -467,35 +467,36 @@ href="#ref-AubertChap6">2022</a>)</span>.</p>
 <div id="r-tutorial" class="section level3">
 <h3><strong>R-tutorial</strong></h3>
 <p>This class will include an R-tutorial session available <a
-href="TP_SBM/TutorialBM.html">here</a></p>
-<ul>
-<li>It is mainly based on the R-package <a
+href="TP_SBM/TutorialBM.html">here</a>. You can download the
+<code>TutorialBM.qmd</code> file <a
+href="TP_SBM/TutorialBM.qmd">here</a></p>
+<p>It is mainly based on the R-package <a
 href="https://cran.r-project.org/web/packages/sbm/index.html"><code>sbm</code></a>.
 Please find informations <a
-href="https://grosssbm.github.io/sbm/">here</a>.</li>
-<li>Some additional R packages are needed.</li>
-</ul>
+href="https://grosssbm.github.io/sbm/">here</a>.</p>
+<p>Some additional R packages are needed.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;sbm&quot;</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;GGally&quot;</span>) <span class="co"># To plot networks</span></span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&#39;network&#39;</span>) </span>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&#39;RColorBrewer&#39;</span>) <span class="co"># to have nice colors</span></span>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&#39;knitr&#39;</span>) <span class="co"># to plot nice tables</span></span></code></pre></div>
 <p><br></p>
-<ul>
-<li>Note that a shiny application is also proposed. You should install
-the last version on your machine</li>
-</ul>
+<p>Note that a shiny application is also proposed. You should install
+the last version on your machine</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;Jo-Theo/shinySbm&quot;</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>shinySbm<span class="sc">::</span><span class="fu">run_app</span>()</span></code></pre></div>
 <p>It can also be used online <a
-href="https://shiny.migale.inrae.fr/app/ShinySBM">here</a>.</p>
+href="https://shiny.migale.inrae.fr/app/ShinySBM">here</a> (not always
+the latest version).</p>
 <p><br></p>
-<ul>
-<li>The second part of the course will use the R package
+<p>In case we have anough time, the second part of the tutorial will
+deal with collection of networks and we will use the R package
 <code>colSBM</code> available on <a
-href="https://rdrr.io/github/Chabert-Liddell/colSBM/f/README.Rmd">Github</a>.</li>
-</ul>
+href="https://rdrr.io/github/Chabert-Liddell/colSBM/f/README.Rmd">Github</a>.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;Chabert-Liddell/colSBM&quot;</span>)</span></code></pre></div>
+<p>The tutorial on <code>colSBM</code> is available at <a
+href="https://chabert-liddell.github.io/colSBM/articles/tutorial.html">this
+link</a></p>
 <p><br></p>
 <p><br></p>
 </div>
