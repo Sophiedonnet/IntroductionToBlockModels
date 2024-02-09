@@ -116,7 +116,15 @@ blockProp <- list(row = c(.25, 0.5 ,.25),col=c(0.1,0.3,0.4,0.2)) # group proport
 means <- matrix(rbinom(K*L, 30, 0.25), K, L)  # connectivity matrix
 means[3,2] = means[1,4] = 0
 connectParam <- list(mean = means)
+
 ```
+```{r }
+
+mySampler2 <- sampleBipartiteSBM(nbNodes, blockProp = blockProp, connectParam = connectParam , model = 'poisson',directed = TRUE, dimLabels = c('books','readers'))
+mySampler
+```
+
+
 
 # 2. Analyzing an ecological data set
 

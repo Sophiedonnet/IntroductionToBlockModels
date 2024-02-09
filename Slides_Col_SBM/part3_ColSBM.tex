@@ -226,11 +226,17 @@ Interpretation:
  \begin{itemize}
   \item Need to model jointly the networks
   \item Identify the groups playing the same role through out the networks, with an unsupervised strategy.  
-  \item Let $(\bY^m)_{m=1,\dots,M}$ denote the collection of networks each involving $n_m$ nodes. 
-  \item $(\bY^m)$ independent. 
-  \item $$\bY^m \sim \SBM_{n_m}(Q^m, \bpi^m, \balpha^m)$$
-  \item Conditions on the parameters $(\bpi^m)_{m=1,\dots,M}$ and $(\balpha^m)_{m=1,\dots,M}$
  \end{itemize}
+ 
+ 
+\begin{block}{A joint model}
+ Let $(\bY^m)_{m=1,\dots,M}$ denote the collection of networks each involving $n_m$ nodes. 
+ \begin{itemize}
+  \item Set $$\bY^m \sim_{ind} \SBM_{n_m}(Q^m, \bpi^m, \balpha^m)$$
+  \item Design conditions on the parameters $(\bpi^m)_{m=1,\dots,M}$ and $(\balpha^m)_{m=1,\dots,M}$
+ \end{itemize}
+\end{block}
+
  \end{frame}
  
 
@@ -239,7 +245,7 @@ Interpretation:
 \subsection{A SBM for a collection of networks}
  
 %======================================================
-\begin{frame}{First naive model}
+\begin{frame}{First model}
 %=======================================================
 
 \begin{block}{iid-colSBM}
@@ -249,8 +255,8 @@ Interpretation:
 with $\pi_{q} >0 $ $\forall q  \in  \{1,\dots, Q\}$ and $\sum_{q  = 1}^Q \pi_{q} = 1$.
 \end{block}
 \begin{itemize}
-\item  $(Q-1)+Q^2$ unknown parameters, $M$ clustering 
-\item  Too strict to be applied to the Thomson's dataset
+\item  $(Q-1)+Q^2$ unknown parameters, $M$ clustering $Z^{m}$
+\item  Too strict to be applied to the Thomson's dataset? 
 \end{itemize}
 
 
